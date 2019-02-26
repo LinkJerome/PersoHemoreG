@@ -1,0 +1,21 @@
+{
+  "short_name": "HemoreG",
+  "name": "HemoreG - Jérôme GIL",
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "type": "image/png",
+      "sizes": "50x50"
+    },
+    {
+      "src": "img/favicon_large.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#A00000"
+}

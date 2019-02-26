@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr-fr">
+<head>
+  <title>LifIHM - DELFANTI Maxence - GIL Jérôme </title>
+    <meta http-equiv="Content-Type"
+   content="text/html; charset=UTF-8">
+  <meta content="DELFANTI - GIL" name="author">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</head>
+  <body>
+      <header>
+          <table>
+              <tbody>
+              <tr>
+                  <th class="col-xs-6" style="vertical-align: top;"><img style="width: 485px; height: 118px;" src="https://www.univ-lyon1.fr/images/www/logo-lyon1.png" alt="Logo de UCBL" align="middle"></th>
+                  <th class="col-xs-6" style="vertical-align: middle; width: 739px; text-align: right;">
+                      <h1>LifIHM - Tableau de vote du Sondage</h1>
+                      Projet de Sondage
+                  </th>
+              </tr>
+              </tbody>
+          </table>
+      </header>
+      <div class="btn-toolbar" style="padding-left: 10%">
+          <button class="btn btn-secondary" type="button" onclick='window.location.reload(false)' value="Rafraichir">Recommencer le sondage</button>
+          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#Parametres">Modifier la question</button>
+          <button class="btn btn-secondary" type="button" onclick="modifierLigne()">Modifier une case du tableau</button>
+          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#Tableau">Afficher / Cacher les votes</button>
+          <input style="margin-left: 2%" type="search" id="search" size="50" placeholder="Rechercher une valeur..."/>
+      </div>
+    <table class="table-responsive">
+        <tr>
+            <th class="col-xs-4" style="vertical-align: top; font-weight: normal">
+                <div id='Parametres' class="collapse">
+                    <br>
+                    <h1>Modification des paramètres du sondage:</h1>
+                    Ecrivez la question de votre sondage, puis validez.
+                    <input type="text" id="question" placeholder="Votre question" class="form-control"/>
+                    <button onclick="modifierQuestion()" id="question-button">Valider</button>
+                </div>
+                <div class="container">
+                    <br>
+                    <br><h1>Ajoutez votre vote au sondage !</h1>
+                    <p>Si vous souhaitez voir le tableau de vote, cliquez sur le bouton dans la barre d'outil.</p>
+                    <form name="myForm" class="col-xs-10" id="needs-validation" novalidate>
+                        <fieldset class="form-group">
+                            <label for="prenom">Votre Prénom </label>
+                            <input type="name" autocomplete="section-blue shipping given-name" class="form-control" name="prenom" id="prenom" placeholder="Prénom" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="nom">Votre Nom </label>
+                            <input type="name" autocomplete="section-blue shipping family-name" class="form-control" name="nom" id="nom" placeholder="Nom" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="email">Votre Email </label>
+                            <input type="email" autocomplete="section-blue shipping email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Votre choix </label>
+                            <input type="text" class="form-control" name="choix" id="choix" placeholder="Votre choix" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="submit" onclick="validerFormulaire();" value="Enregistrer"/>
+                        </fieldset>
+                    </form>
+                </div>
+            </th>
+            <th class="col-xs-8" style="vertical-align: top; padding-top:40px">
+                <h4 id="maQuestion">Quel est votre aliment préféré ?</h4>
+                <table id="Tableau" class="collapse table-responsive">
+                    <tr>
+                        <th class="col-xs-2 bg-success">Prénom</th>
+                        <th class="col-xs-2 bg-warning">Nom</th>
+                        <th class="col-xs-3 bg-info">Email</th>
+                        <th class="col-xs-2 bg-secondary">Choix</th>
+                        <th class="col-xs-2 bg-primary text-dark">Date</th>
+                        <th class="col-xs-1 bg-danger">Supprimer</th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Jean</td>
+                        <td>LOUIS</td>
+                        <td>Jean.Louis@orange.fr</td>
+                        <td>Je ne sais pas</td>
+                        <td>01/01/2000</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Marie</td>
+                        <td>LOUISE</td>
+                        <td>Marie.Louise@sfr.fr</td>
+                        <td>Le chocolat</td>
+                        <td>07/03/2001</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Jean</td>
+                        <td>LOUIS</td>
+                        <td>Jean.Louis@orange.fr</td>
+                        <td>Je ne sais pas</td>
+                        <td>01/01/2000</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Marie</td>
+                        <td>LOUISE</td>
+                        <td>Marie.Louise@sfr.fr</td>
+                        <td>Le chocolat</td>
+                        <td>07/03/2001</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Jean</td>
+                        <td>LOUIS</td>
+                        <td>Jean.Louis@orange.fr</td>
+                        <td>Je ne sais pas</td>
+                        <td>01/01/2000</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Marie</td>
+                        <td>LOUISE</td>
+                        <td>Marie.Louise@sfr.fr</td>
+                        <td>Le chocolat</td>
+                        <td>07/03/2001</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Jean</td>
+                        <td>LOUIS</td>
+                        <td>Jean.Louis@orange.fr</td>
+                        <td>Je ne sais pas</td>
+                        <td>01/01/2000</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Marie</td>
+                        <td>LOUISE</td>
+                        <td>Marie.Louise@sfr.fr</td>
+                        <td>Le chocolat</td>
+                        <td>07/03/2001</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Jean</td>
+                        <td>LOUIS</td>
+                        <td>Jean.Louis@orange.fr</td>
+                        <td>Je ne sais pas</td>
+                        <td>01/01/2000</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                    <tr style="border: 1px solid black; text-indent: 5px;" class="added-element">
+                        <td>Marie</td>
+                        <td>LOUISE</td>
+                        <td>Marie.Louise@sfr.fr</td>
+                        <td>Le chocolat</td>
+                        <td>07/03/2001</td>
+                        <th><div style="cursor: pointer; text-align: center; color: #d43f3a" onclick="supprimeLigne(this)" onclass="delete-added-element">X</div></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+    <footer style="position:fixed; left:0px; bottom:0px; height:25px; width:100%; background:#999; text-align: center;">
+        Maxence DELFANTI - Jérôme GIL - IHM - UCBL
+    </footer>
+
+      <script>
+          (function() {
+              'use strict';
+
+              window.addEventListener('load', function() {
+                  rechercher();
+                  var form = document.getElementById('needs-validation');
+                  form.addEventListener('submit', function(event) {
+                      event.preventDefault();
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              }, false);
+          })();
+
+          function ajouterLigne(){
+              let ligne = document.createElement("tr");
+              ligne.style.border = "1px solid black";
+              ligne.style.textIndent = "5px";
+              ligne.classList.add("added-element");
+
+              let colPrenom = document.createElement("td");
+              let Prenom = document.getElementById("prenom").value;
+              colPrenom.append(Prenom);
+              ligne.append(colPrenom);
+
+              let colNom = document.createElement("td");
+              let Nom = document.getElementById("nom").value;
+              colNom.append(Nom);
+              ligne.append(colNom);
+
+              let colEmail = document.createElement("td");
+              let email = document.getElementById("email").value;
+              colEmail.append(email);
+              ligne.append(colEmail);
+
+              let colChoix = document.createElement("td");
+              let chx = document.getElementById("choix").value;
+              colChoix.classList.add("choiSt");
+              colChoix.append(chx);
+              ligne.append(colChoix);
+
+              let colDate = document.createElement("td");
+              let date = new Date();
+              date = (date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear());
+              colDate.append(date);
+              ligne.append(colDate);
+
+              let colSup = document.createElement("th");
+              let divSup = document.createElement("div");
+              divSup.innerHTML = "X";
+              divSup.style = "color: #d43f3a ; cursor: pointer; text-align: center";
+              divSup.classList.add("delete-added-element");
+              divSup.addEventListener("click", function () {
+                  supprimeLigne(divSup);
+              });
+              colSup.append(divSup);
+              ligne.append(colSup);
+
+              let table = document.getElementById("Tableau");
+              table.append(ligne);
+              rechercher();
+              alert("Vous avez créé votre ligne!");
+          }
+
+          function supprimeLigne(ligne2){
+              let Tableau = ligne2.parentNode.parentNode.parentNode;
+              let row = ligne2.parentNode.parentNode;
+              Tableau.removeChild(row);
+          }
+
+          function validerFormulaire() {
+              let x = document.forms["myForm"]["email"].value;
+              let y = document.forms["myForm"]["prenom"].value;
+              let z = document.forms["myForm"]["nom"].value;
+              let w = document.forms["myForm"]["choix"].value;
+              if ((x.trim() == "") || (y.trim() == "") || (z.trim() == "") || (w.trim() == "")) {
+                  alert("Il semblerait que vous ayez mal complété le formulaire...");
+                  return false;
+              }
+              else ajouterLigne();
+          }
+
+          function modifierLigne() {
+              $('td').on('click', function () {
+                  let $case = $(this);
+                  let $input = $('<input>', {
+                      value: $case.text(),
+                      type: 'text',
+                      blur: function () {
+                          $case.text(this.value);
+                      },
+                      keyup: function (element) {
+                          if (element.which === 13) $input.blur();
+                      }
+                  }).appendTo($case.empty()).focus();
+              });
+          }
+
+          function modifierQuestion() {
+              let Ques = document.getElementById("question").value;
+              document.getElementById("maQuestion").innerHTML = Ques;
+          }
+
+          function rechercher() {
+              let rows = $('.added-element');
+              $('#search').keyup(function () {
+                  let val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+                  rows.show().filter(function () {
+                      let text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+                      return !~text.indexOf(val);
+                  }).hide();
+              });
+          }
+      </script>
+      <style>
+          table {
+              border-collapse: collapse;
+              width: 100%;
+              margin: auto;
+              padding: 5px;
+          }
+
+          td, th {
+              text-align: left;
+              padding: 5px;
+          }
+
+      </style>
+  </body>
+</html>

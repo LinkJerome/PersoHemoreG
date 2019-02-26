@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="shortcut icon" href="../data/compass-rose.png" type="image/png"> <!-- Page icon -->
+        <title>A propos</title>
+        <style>
+            #descriptionButton:hover {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
+					<a class="my-0 mr-md-auto font-weight-normal text-light navbar-brand" href="../index.html">
+						<img src="../data/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+						Improve my GPX
+					</a>
+            <nav class="my-2 my-md-0 mr-md-3">
+							<div class="btn-group" role="group">
+								<input type="file" id="hiddenButton" hidden/>
+								<input type="button" id="importButton" class="btn btn-outline-success" value="Importer" disabled/>
+								<button type="button" id="tutorialButton" title="Lance un tutoriel" class="btn btn-outline-danger" disabled><i id="tutorialToggle" class="fas fa-play"></i> Tutoriel</button>
+							</div>
+
+							<div class="btn-group" role="group">
+								<a type="button" id="aboutButton" class="btn btn-warning" href="apropos.html">A Propos</a>
+								<button type="button" id="helpButton" alt="Ouvre une fenêtre d'aide" title="Ouvre une fenêtre d'aide" class="btn btn-outline-warning" onclick="help();">Besoin d'aide ?</button>
+							</div>
+            </nav>
+        </div>
+        <div id="planDeTravail" class="row" style="margin-left:1%; width: 99%; margin-bottom: 40px">
+            <div class="col-lg-8">
+                <img src="../data/Us.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+                <div class="col-lg-4">
+                    <h1>Notre histoire</h1>
+                        <p>Etudiants en informatique, nous avons aujourd'hui décidé de nous réunir afin de créer ce site pour satisfaire toutes les contraintes données par notre client. <i>Improve my GPX</i> est un site totalement développé dans le cadre d'une UE de notre licence d'informatique (LIFPROJET).</p>
+                    <h1>Contact</h1>
+                        <p>Si vous rencontrez des problèmes lors de l'édition de vos traces ou si vous avez des
+                            propositions d'améliorations à nous faire, vous pouvez nous contacter via le formulaire
+                            que vous trouverez sur <a href="https://goo.gl/forms/4YXACOZ3XMEP6T7U2" target="_BLANK"> ce lien</a>.
+                            <br /><br />
+                            Toute l'équipe de <i>Improve my GPX</i> vous remercie pour votre aide et votre soutien.</p>
+                </div>
+        </div>
+        <script>
+            function help(){
+                window.open('aide.html', "Aide pour le site Improve my GPX", 'width = 400, height = 800, left = 1000');
+            }
+        </script>
+    </body>
+        <footer class="footer" style="position:fixed; bottom:0; width:100%; height:40px; line-height:40px; background-color: #f6f6f6">
+            <div class="d-flex flex-column flex-md-row align-items-center px-md-4 mb-3 bg-light border-bottom shadow-sm">
+                <h5 class="my-0 mr-md-auto font-weight-normal text-dark">Visualisation et Edition de traces GPS sur le WEB</h5>
+                <a class="p-2 text-dark" href="#">GIL Jérôme - PEYROT Thomas - SCRIVEN Anthony</a>
+            </div>
+        </footer>
+</html>

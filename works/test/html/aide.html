@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<title>Aide - Improve my GPX</title>
+	</head>
+	<body>
+		<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
+			<h5 class="my-0 mr-md-auto font-weight-normal text-light">Aide pour le site Improve my GPX</h5></div>
+		<div class="col-sm" style="background-color  : #909090;">
+			<u class="text-light text-center"><h3>Comment utiliser la carte ?</h3></u>
+			<div class="col-md text-light">
+				<ul>
+					<li>
+						<h4>Modes :</h4>
+						<p><span class="badge badge-info">INFO</span> Pour faire apparaître les points d'une trace sur la carte, faîtes un clic droit sur la zone souhaitée.</p>
+						<ol>
+							<li>
+								<button type="button" alt="Mode déplacement de carte" title="Mode déplacement de carte" class="btn btn-secondary btn-md"><i class="fas fa-arrows-alt"></i></button>
+								<p>Permet de déplacer la carte uniquement.</p>
+							</li>
+							<li>
+								<button type="button" alt="Mode déplacement de points" title="Mode déplacement de points" class="btn btn-secondary btn-md"><i class="fas fa-hand-pointer"></i></button>
+								<p>Cette fonction active le mode de déplacement de points.</p>
+							</li>
+							<li>
+								<button type="button" class="btn btn-secondary btn-md" alt="Mode ajout de points" title="Mode ajout de points"><i class="fas fa-plus"></i></button>
+								<p>Ce bouton permet d'ajouter un point à partir de la fin de la trace GPS sélectionnée.</p>
+							</li>
+							<li>
+								<button type="button" class="btn btn-secondary btn-md" alt="Mode suppression de points" title="Mode suppression de points"><i class="fas fa-minus"></i></button>
+								<p>Cette option permet la suppression du point sélectionné.</p>
+							</li>
+							<li>
+								<button type="button" class="btn btn-secondary btn-md" alt="Mode de coupe de traces" title="Mode de coupe de traces"><i class="fas fa-unlink"></i></button>
+								<p>Ce bouton permet de couper en deux morceaux une trace à partir du point sélectionné.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<h4>Historique :</h4>
+						<p><span class="badge badge-warning">ATTENTION</span> Vous pouvez seulement annuler la dernière action réalisée.</p>
+						<ol>
+							<li>
+								<button type="button" class="btn btn-secondary btn-md"  alt="Annuler" title="Annuler"><i class="fas fa-undo"></i></button>
+								<p>Ce bouton permet d'annuler la dernière action effectuée.</p>
+							</li>
+							<li>
+								<button type="button" class="btn btn-secondary btn-md" alt="Réitérer" title="Réitérer"><i class="fas fa-redo"></i></button>
+								<p>Ce bouton permet de réitérer la dernière action annulée.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<h4>Les formulaires :</h4>
+						<ol>
+							<li>
+								<button type="button" class="btn btn-secondary btn-md" alt="Lier des traces" title="Lier des traces"><i class="fas fa-link"></i></button>
+								<p>Cette fonctionnalité fusionne deux traces choisies en fonction du côté souhaité.</p>
+							</li>
+							<li>
+								<button type="button" alt="Réduire le nombre de points" title="Réduire le nombre de points" class="btn btn-secondary btn-md"><i class="fas fa-divide"></i></button>
+								<p>Réduit le nombre de points. Entrez le nombre de points à enlever et appuyez sur le bouton</p>
+							</li>
+						</ol>
+					</li>
+						<button id="saveButton" type="button" alt="Télécharger" title="Télécharger" class="btn btn-secondary btn-md"><i class="fas fa-file-download"></i></button>
+						<p>Ce bouton permet de télécharger la trace sous forme de fichier .gpx.</p>
+					</li><br />
+					<li>
+						<h4>Supprimer une trace</h4>
+						<p> Pour supprimer une trace, il vous suffit de faire un clic droit sur la trace que vous souhaitez supprimer.</p> 
+					</li><br />
+					<li>
+						<h4>Altitude moyenne:</h4>
+						<ol>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#0000FF"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> x < 600m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#007FFF"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 600m ≤ x < 1200m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#00FFFF"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 1200m ≤ x < 1800m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#00FF7F"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 1800m ≤ x < 2400m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#00FF00"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 2400m ≤ x < 3000m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#7FFF00"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 3000m ≤ x < 3600m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#FFFF00"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 3600m ≤ x < 4200m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#FF7F00"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 4200m ≤ x < 4800m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#FF0000"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 4800m ≤ x < 5400m</p>
+							</li>
+							<li>
+								<p><svg height="20" width="20">
+								  <circle r="10" cx="10" cy="10" fill="#000000"/>
+								  Désolé, votre navigateur n'est pas compatible avec le format SVG.
+								</svg> 5400m ≤ x</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<h5>Pour une prise en main plus facile de notre site, nous vous invitons à essayer le Tutoriel.</h5><br />
+					</li>
+				</ul>
+			</div>
+			<h4 class="text-light" style="padding-bottom : 10%;">Nous espérons que vous passerez un bon moment en utilisant Improve my GPX ! <i class="fas fa-smile-wink"></i></h4>
+		</div>
+	</body>
+	<footer class="footer" style="position:fixed; bottom:0; width:100%; height:5%; background-color: #f6f6f6;">
+	<div class="d-flex flex-column flex-sm-row align-items-center px-sm-4 mb-3 bg-light border-bottom shadow-sm">
+		<p class="p-2 text-dark" >GIL Jérôme - PEYROT Thomas - SCRIVEN Anthony</p>
+	</div>
+</footer>
+</html>

@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Images */
+
+div#slider { overflow: hidden }
+
+div#slider figure {
+  position: relative; 
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: left;
+  animation: 30s sliding infinite;
+}
+
+@keyframes sliding {
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	100% { left: -400%; }
+}
+
+div#slider figure img { width: 20%; height: auto; float: left; }
+
+img.logo {
+	width: 25rem;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* background */		
+.hero {
+	background: black url(../img/bullets.png) center / cover;
+}
+
+
+@media screen and (orientation: portrait){
+	@media screen and (max-width:768px) {
+		.hero { background: black url("../img/bullets@3x.png") center / cover; }
+		img.logo {
+			width: 20rem;
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+}
+@media screen and (orientation: landscape){
+	@media (max-width: 1024px) {
+		.hero { background: black url("../img/bullets@2x.png") center / cover; }
+		img.logo {
+			width: 15rem;
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+	@media screen and (max-width:768px) {
+		.hero { background: black url("../img/bullets@3x.png") center / cover; }
+		img.logo {
+			width: 10rem;
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+}
+
+
+/* responsive */
+@media (max-width: 768px) {
+	:root {
+		font-size: 90%;
+	}
+}
+
+#a { grid-area: a; }
+#b { grid-area: b; }
+#c { grid-area: c; }
+#d { grid-area: d; }
+#e { grid-area: e; }
+
+#grid {
+    display: grid;
+    grid-template-areas:
+        "a a a a"
+        "b c d e";
+
+    grid-row-gap: 1rem;
+}
+
+@media (max-width: 512px) {
+    #grid {
+        grid-template-areas:
+            "a a a"
+            "b c d"
+            "e e e";
+    }
+}
+
+.center, .center-column, .top, .right, .bottom, .left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.desktop {
+		display: none;
+	}
+}
