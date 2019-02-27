@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: hemoreg.me
+Token: 1edfee3471e2c26e2a36e0170588abaad15a0b30bd60e7df25392239b7c1c7b2
