@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
     "autoprefixer": "^9.6.0",
     "babel": "^6.23.0",
-    "bulma": "^0.7.5",
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.11.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "reactbulma": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "alias": {
+    "react-dom": "@hot-loader/react-dom"
   }
 }
