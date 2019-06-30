@@ -6,12 +6,11 @@ import DrawerMinimize from './DrawerMinize';
 import Footer from './Footer';
 import Header from './Header';
 import Timeline from './Timeline';
-import 'typeface-roboto';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTwitter, faLinkedin  } from '@fortawesome/free-brands-svg-icons'
-import { faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faTwitter, faLinkedin, faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase);
+library.add(faTwitter, faLinkedin, faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase, faAngleDown);
 
 
 const useStyles = makeStyles(theme => ({
