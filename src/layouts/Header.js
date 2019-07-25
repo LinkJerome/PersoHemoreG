@@ -10,7 +10,8 @@ import { withTranslation } from 'react-i18next';
 
 const useStyles = makeStyles({
   root: {
-    width: '100%'
+    width: '100%',
+    paddingBottom: '2em'
   },
 });
 
@@ -20,7 +21,6 @@ const targetConst = "_blank";
 
 function Header({ t }) {
     const classes = useStyles();
-    const spacing = React.useState(2);
 
     return (
         <React.Fragment>
@@ -48,14 +48,14 @@ function Header({ t }) {
                 </Grid>
                 <Grid container justify="center">
                     <Button className="scroll" color="primary" variant="contained" href="#infos">
-                        EN SAVOIR PLUS &nbsp; <FontAwesomeIcon icon="angle-down"/>
+                        {t('knowMore')} &nbsp; <FontAwesomeIcon icon="angle-down"/>
                     </Button>
                 </Grid>
                 <Grid
                     container
                     direction="row"
                     justify="space-evenly"
-                    alignItems="center" spacing={spacing}
+                    alignItems="center"
                 >
                     <Grid item>
                         <Typography>

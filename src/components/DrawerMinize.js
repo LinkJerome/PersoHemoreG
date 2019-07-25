@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Drawer, ListItem, ListItemIcon, makeStyles } from '@material-ui/core';
+import { Drawer, ListItem, ListItemIcon, makeStyles, ListItemText } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import clsx from 'clsx';
 import React from 'react';
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 
 function DrawerMinimize(props) {
     const classes = useStyles();
-
+    const displayCurrentLanguage = localStorage.i18nextLng === 'fr' ? 'Translate' : 'Traduire';
     return(
         <Drawer
             variant="permanent"
@@ -57,10 +57,14 @@ function DrawerMinimize(props) {
             <div className={props.toolbarClass} />
             <List>
                 <ListItem button key="Collapse" onClick={props.toggleDrawer}>
-                    <ListItemIcon><FontAwesomeIcon icon="bars" size="2x"/></ListItemIcon>
+                    <ListItemIcon><FontAwesomeIcon icon="bars" size="lg"/></ListItemIcon>
                 </ListItem>
                 <TranslateContentMenu/>
-                </List>
+                <ListItem button onClick={props.changeLanguage}>
+                    <ListItemIcon><FontAwesomeIcon icon="flag" size="lg"/></ListItemIcon>
+                    <ListItemText primary={displayCurrentLanguage} />
+                </ListItem>
+            </List>
         </Drawer>
     )};
 
