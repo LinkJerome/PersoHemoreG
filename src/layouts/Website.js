@@ -39,6 +39,9 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
         padding: theme.spacing(3),
     },
+    app : {
+        paddingBottom: '3vw'
+    }
 }));
 
 function Website() {
@@ -64,7 +67,7 @@ function Website() {
                     changeLanguage={_handleChangeLanguage}
                     toolbarClass={classes.toolbar}
                 />
-                <Container maxWidth="xl">
+                <Container maxWidth="xl" className={classes.app}>
                     <Header />
                     {routes.map((route, index) => (
                     <Route

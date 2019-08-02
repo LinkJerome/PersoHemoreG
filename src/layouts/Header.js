@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container, Grid, Typography, Button } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
@@ -45,11 +45,6 @@ function Header({ t }) {
                         <Typography variant="h1" component="h1" gutterBottom>{t('myNameIs')}</Typography>
                         <Typography variant="h2" component="h2" gutterBottom>{t('myCurrentJob')}</Typography>
                     </Grid>
-                </Grid>
-                <Grid container justify="center">
-                    <Button className="scroll" color="primary" variant="contained" href="#infos">
-                        {t('knowMore')} &nbsp; <FontAwesomeIcon icon="angle-down"/>
-                    </Button>
                 </Grid>
                 <Grid
                     container

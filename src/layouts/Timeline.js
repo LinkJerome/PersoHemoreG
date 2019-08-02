@@ -9,13 +9,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { Trans } from 'react-i18next';
-import CarouselImageText from '../components/CarouselImageText';
+import FullScreenDialog from '../components/FullScreenDialog';
 import capgemini from './../assets/img/website/Capgemini.png';
 import SNCF from './../assets/img/website/coiffeSNCF.png';
 import Hemoreg from './../assets/img/website/HemoreG.gif';
 import lyon1 from './../assets/img/website/logo-lyon1.png';
 import maquette from './../assets/img/website/maquette.PNG';
 import meteo09 from './../assets/img/website/meteo09.png';
+import chutSite from './../assets/img/website/chutsite.jpg';
+import improvemygpx from './../assets/img/website/improvemygpx.jpg';
+import explateau from './../assets/img/website/explateau.jpg';
+import sondouagesite from './../assets/img/website/sondouagesite.jpg';
+import persograph from './../assets/img/website/persograph.jpg';
 import xiot from './../assets/img/website/XIoT.png';
 import zupDeCo from './../assets/img/website/zup-de-co.png';
 
@@ -23,18 +28,20 @@ import zupDeCo from './../assets/img/website/zup-de-co.png';
 
 /* SETTING AND CSS OF THE PAGE */
 
-const imgW = "400px";
-
-const dataCarouselImage = [
-	{img: capgemini, caption: 'Capgemini, Ho Chi Minh VIETNAM', link: 'https://www.linkedin.com/company/capgeminivietnam'},
-	{img: Hemoreg, caption: 'HemöreG'},
-	{img: lyon1, caption: 'Université Claude Bernard, Lyon FRANCE', link: 'https://fst-informatique.univ-lyon1.fr'}
-];
+const imgW = "300vw";
 
 const dataCarouselImageHemoreg = [
-	{img: maquette, caption: 'French Groove', link: 'https://www.frenchgroove.com/'},
-	{img: Hemoreg, caption: 'HemöreG', link: 'https://www.hemoreg.me'},
-	{img: meteo09, caption: 'Meteo 09', link: 'https://www.facebook.com/Meteo09/'}
+	{img: maquette, caption: 'French Groove', link: 'https://www.frenchgroove.com/', moreDetail: 'detailFrenchGroove'},
+	{img: Hemoreg, caption: 'HemöreG', link: 'https://www.hemoreg.me', moreDetail: 'detailHemoreg'},
+	{img: meteo09, caption: 'Meteo 09', link: 'https://www.facebook.com/Meteo09/', moreDetail: 'detailMeteo09'},
+	{img: chutSite, caption: 'Chut Bibliothèque', link: 'https://hemoreg.me/works/chutbibliotheque/', moreDetail: 'detailChutBibliotheque'},
+	{img: persograph, caption: 'Perso graph', link: 'https://hemoreg.me/works/persograph/', moreDetail: 'detailPersoGraph'},
+];
+
+const dataCarouselImageUCBL = [
+	{img: improvemygpx, caption: 'Improve My GPX', link: 'https://hemoreg.me/works/improvemygpx/', moreDetail: 'detailImproveMyGpx'},
+	{img: explateau, caption: 'Croque Salade', link: '', moreDetail: 'detailCroqueSalade'},
+	{img: sondouagesite, caption: 'Sondouage', link: 'https://hemoreg.me/works/sondouage/', moreDetail: 'detailSondouage'}
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -42,8 +49,8 @@ const useStyles = makeStyles(theme => ({
 		  width: '100%'
     },
     button: {
-		marginTop: theme.spacing(1),
-		marginRight: theme.spacing(1)
+      marginTop: theme.spacing(1),
+      marginRight: theme.spacing(1)
     },
     actionsContainer: {
       	marginBottom: theme.spacing(2)
@@ -56,8 +63,9 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(2),
 		textAlign: 'center',
 		color: theme.palette.text.primary
-	}
+  }
   }));
+
 
   /* RENDER FUNCTIONS */
 
@@ -67,9 +75,9 @@ const useStyles = makeStyles(theme => ({
         return (
           <React.Fragment>
             <Typography component="h5" variant="h5">
-				<Trans i18nKey="jobList0"/>
-			</Typography>
-			<br/>
+              <Trans i18nKey="jobList0"/>
+            </Typography>
+            <br/>
             <Link
               target="_blank"
               rel="noopener noreferrer"
@@ -82,20 +90,22 @@ const useStyles = makeStyles(theme => ({
       case 1:
         return (
           <React.Fragment>
-			<Typography component="h5" variant="h5">
-            	<Trans i18nKey="jobList1"/>
-			</Typography>
-			<br/>
-			<img src={Hemoreg} width={imgW} alt="HemöreG Logo"/>
+            <Typography component="h5" variant="h5">
+                    <Trans i18nKey="jobList1"/>
+            </Typography>
+            <br/>
+            <img src={Hemoreg} width={imgW} alt="HemöreG Logo"/>
+            <br/>
+            <FullScreenDialog data={dataCarouselImageHemoreg}/>
           </React.Fragment>
         );
       case 2:
         return(
           <React.Fragment>
-			<Typography component="h5" variant="h5">
-            	<Trans i18nKey="jobList2"/>
-			</Typography>
-			<br/>
+            <Typography component="h5" variant="h5">
+                    <Trans i18nKey="jobList2"/>
+            </Typography>
+            <br/>
             <Link
               target="_blank"
               rel="noopener noreferrer"
@@ -103,15 +113,17 @@ const useStyles = makeStyles(theme => ({
             >
               <img src={lyon1} width={imgW} alt="Lyon 1 Logo"/>
             </Link>
+            <br/>
+            <FullScreenDialog data={dataCarouselImageUCBL}/>
           </React.Fragment>
         );
       case 3:
         return (
           <React.Fragment>
-			<Typography component="h5" variant="h5">
-            	<Trans i18nKey="jobList3"/>
-			</Typography>
-			<br/>
+            <Typography component="h5" variant="h5">
+                    <Trans i18nKey="jobList3"/>
+            </Typography>
+            <br/>
             <Link target="_blank" rel="noopener noreferrer" href="https://www.zupdeco.org/">
               <img src={zupDeCo} width={imgW} alt="ZupDeCo Logo"/>
             </Link>
@@ -120,10 +132,10 @@ const useStyles = makeStyles(theme => ({
       case 4:
         return (
           <React.Fragment>
-			<Typography component="h5" variant="h5">
-            	<Trans i18nKey="jobList4"/>
-			</Typography>
-			<br/>
+            <Typography component="h5" variant="h5">
+                    <Trans i18nKey="jobList4"/>
+            </Typography>
+            <br/>
             <Link target="_blank" rel="noopener noreferrer" href="https://www.sncf.com/">
               <img src={SNCF} width={imgW} alt="ZupDeCo Logo"/>
             </Link>
@@ -171,26 +183,44 @@ const useStyles = makeStyles(theme => ({
 				</Typography>
 			</Paper>
 		);
-	  case 1:
-		return <CarouselImageText data={dataCarouselImageHemoreg} />;
-      case 2:
+      case 1:
         return (
-          <React.Fragment>
-			<Typography component="h5" variant="h5" gutterBottom>
-				<Trans i18nKey="jobList2"/>
-			</Typography>
-            <br/>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.univ-lyon1.fr/"
-            >
-              <img src={lyon1} width={imgW} alt="Lyon 1 Logo"/>
-            </Link>
-          </React.Fragment>
-        );
+        dataCarouselImageHemoreg.map((data, index) => {
+          return(
+            <Paper className={classes.paper} key={index}>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={data.link}
+              >
+                <img src={data.img} width={imgW} alt={data.caption}/>
+              </Link>
+              <Typography component="h5" variant="subtitle1" gutterBottom>
+                {data.caption}
+              </Typography>
+            </Paper>
+          );
+        }));
+      case 2:
+          return (
+            dataCarouselImageUCBL.map((data, index) => {
+              return(
+                <Paper className={classes.paper} key={index}>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={data.link}
+                  >
+                    <img src={data.img} width={imgW} alt={data.caption}/>
+                  </Link>
+                  <Typography component="h5" variant="subtitle1" gutterBottom>
+                    {data.caption}
+                  </Typography>
+                </Paper>
+              );
+            }));
       default:
-        return <CarouselImageText data={dataCarouselImage} />;
+        return (null);
     }
   }
 function getSteps() {
@@ -227,14 +257,26 @@ function Timeline() {
         <Grid container 
           direction="row"
           justify="center"
-          alignItems="center"
-		  className={classes.root}
+          alignItems="flex-start"
+          className={classes.root}
         >
-          <Grid item sm={12} md={8} lg={6} xl={4}>
-            <Typography variant="h2" component="h2" gutterBottom><Trans i18nKey="myCourse"/></Typography>
-            <Typography  variant="subtitle1" component="h3" gutterBottom>
-              <Trans i18nKey="myCourseSub"/>
-            </Typography>
+          <Grid container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item sm={12} md={8} lg={6} xl={4}>
+              <Typography variant="h2" component="h2" gutterBottom>
+                <Trans i18nKey="myCourse"/>
+              </Typography>
+            </Grid>
+            <Grid item sm={12} md={8} lg={6} xl={4}>
+              <Typography  variant="subtitle1" component="h3" gutterBottom>
+                <Trans i18nKey="myCourseSub"/>
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid item sm={12} md={6} lg={4}>
             <Stepper activeStep={activeStep} orientation="vertical">
                 {steps.map((label, index) => (
                 <Step key={label}>
@@ -273,9 +315,10 @@ function Timeline() {
                 </Paper>
             )}
             </Grid>
-            <Grid
-				item sm={12} md={8} lg={6} xl={4} >
-              {getStepContent2(activeStep, classes)}
+            <Grid item sm={12} md={6} lg={8}>
+              <Grid container>
+                {getStepContent2(activeStep, classes)}
+              </Grid>
             </Grid>
         </Grid>
     );

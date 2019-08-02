@@ -4,30 +4,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Link } from "@material-ui/core";
-
+import { Trans } from "react-i18next";
 
 /* SETTING AND CSS OF THE PAGE */
 
-const settings = {
-    arrows: false,
-    autoplay: true,
-    pauseOnFocus: true,
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    width: '40vw',
-    background: '#ffffff',
-    marginLeft: '2em',
-    marginRight: '2em'
-  },
   img: {
-    width: '300px',
+    width: '80%',
     margin: 'auto'
   },
   caption: {
@@ -39,9 +24,19 @@ const useStyles = makeStyles(theme => ({
 
 function CarouselImageText (props) {
   const classes = useStyles();
+
+  const settings = {
+    arrows: false,
+    autoplay: true,
+    pauseOnFocus: false,
+    slidesToShow: props.nb,
+    slidesToScroll: props.nb,
+    dots: false,
+    infinite: true,
+    speed: 500
+  };
     
     return (
-      <div className={classes.container}>
         <Slider {...settings}>
           {props.data.map((content, index) => {
             return (
@@ -53,13 +48,12 @@ function CarouselImageText (props) {
                 >
                   <img src={content.img} className={classes.img} alt={content.caption} ></img>
                 </Link>
-                <br/>
-                <Typography component="h3" variant="subtitle1" className={classes.caption} gutterBottom>{content.caption}</Typography>
+                <Typography component="h4" variant="h4" className={classes.caption} gutterBottom>{content.caption}</Typography>
+                <Typography component="p" variant="subtitle1" className={classes.caption} gutterBottom><Trans i18nKey={content.moreDetail}></Trans></Typography>
               </div>
             );
           })}
         </Slider>
-      </div>
     );
 }
 
