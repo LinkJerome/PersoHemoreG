@@ -43,23 +43,23 @@ const dataCarouselImage = {
     ],
     dataCarouselImageUCBL: [
         {
-        img: improvemygpx,
-        caption: 'Improve My GPX',
-        link: 'https://hemoreg.me/works/improvemygpx/',
-        moreDetail: 'detailImproveMyGpx'
-      },
+            img: improvemygpx,
+            caption: 'Improve My GPX',
+            link: 'https://hemoreg.me/works/improvemygpx/',
+            moreDetail: 'detailImproveMyGpx'
+        },
         {
-        img: explateau,
-        caption: 'Croque Salade',
-        link: '',
-        moreDetail: 'detailCroqueSalade'
-      },
+            img: explateau,
+            caption: 'Croque Salade',
+            link: '',
+            moreDetail: 'detailCroqueSalade'
+        },
         {
-        img: sondouagesite,
-        caption: 'Sondouage',
-        link: 'https://hemoreg.me/works/sondouage/',
-        moreDetail: 'detailSondouage'
-      }
+            img: sondouagesite,
+            caption: 'Sondouage',
+            link: 'https://hemoreg.me/works/sondouage/',
+            moreDetail: 'detailSondouage'
+        }
     ]
 };
   
