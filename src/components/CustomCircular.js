@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid, CircularProgress, CardHeader, CardActionArea, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { Trans } from 'react-i18next';
+
 const useStyles = makeStyles(theme => ({
     root: {
           width: '100%',

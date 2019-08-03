@@ -67,6 +67,7 @@ export const en = {
     "professionalSummary": "Because of my IT classes ; an aperture on economy, languages, handicaps and sport ; a general culture and an internship at Capgemini at Ho Chi Minh City, I have acquired web skills, software and system knowledge.",
     "place": "Place of Birth :",
     "placeOfBirth": "Pink City : Toulouse",
+    "portfolio": "Portfolio",
     "reset": "Reset",
     "timelineEnd": "You've reach the end of my Timeline !",
     "whoAmI": "Who am I ?",

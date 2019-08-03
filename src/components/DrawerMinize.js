@@ -5,9 +5,6 @@ import clsx from 'clsx';
 import React from 'react';
 import TranslateContentMenu from '../variables/TranslateContentMenu';
 
-
-
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -57,11 +54,11 @@ function DrawerMinimize(props) {
             <div className={props.toolbarClass} />
             <List>
                 <ListItem button key="Collapse" onClick={props.toggleDrawer}>
-                    <ListItemIcon><FontAwesomeIcon icon="bars" size="lg"/></ListItemIcon>
+                    <ListItemIcon><FontAwesomeIcon icon="bars" size="2x"/></ListItemIcon>
                 </ListItem>
                 <TranslateContentMenu/>
                 <ListItem button onClick={props.changeLanguage}>
-                    <ListItemIcon><FontAwesomeIcon icon="flag" size="lg"/></ListItemIcon>
+                    <ListItemIcon><FontAwesomeIcon icon="flag" size="2x"/></ListItemIcon>
                     <ListItemText primary={displayCurrentLanguage} />
                 </ListItem>
             </List>

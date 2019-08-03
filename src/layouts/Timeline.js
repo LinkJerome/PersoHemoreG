@@ -14,17 +14,11 @@ import capgemini from './../assets/img/website/Capgemini.png';
 import SNCF from './../assets/img/website/coiffeSNCF.png';
 import Hemoreg from './../assets/img/website/HemoreG.gif';
 import lyon1 from './../assets/img/website/logo-lyon1.png';
-import maquette from './../assets/img/website/maquette.PNG';
-import meteo09 from './../assets/img/website/meteo09.png';
-import chutSite from './../assets/img/website/chutsite.jpg';
-import improvemygpx from './../assets/img/website/improvemygpx.jpg';
-import explateau from './../assets/img/website/explateau.jpg';
-import sondouagesite from './../assets/img/website/sondouagesite.jpg';
-import persograph from './../assets/img/website/persograph.jpg';
 import xiot from './../assets/img/website/XIoT.png';
 import zupDeCo from './../assets/img/website/zup-de-co.png';
 import zupDeCo2 from './../assets/img/website/zup-de-co2.png';
 
+import dataCarouselImage from './../assets/constants/dataCarouselImage';
 
 
 /* SETTING AND CSS OF THE PAGE */
@@ -32,19 +26,7 @@ import zupDeCo2 from './../assets/img/website/zup-de-co2.png';
 const imgW = "300vw";
 const imgWFull = "50%";
 
-const dataCarouselImageHemoreg = [
-	{img: maquette, caption: 'French Groove', link: 'https://www.frenchgroove.com/', moreDetail: 'detailFrenchGroove'},
-	{img: Hemoreg, caption: 'HemöreG', link: 'https://www.hemoreg.me', moreDetail: 'detailHemoreg'},
-	{img: meteo09, caption: 'Meteo 09', link: 'https://www.facebook.com/Meteo09/', moreDetail: 'detailMeteo09'},
-	{img: chutSite, caption: 'Chut Bibliothèque', link: 'https://hemoreg.me/works/chutbibliotheque/', moreDetail: 'detailChutBibliotheque'},
-	{img: persograph, caption: 'Perso graph', link: 'https://hemoreg.me/works/persograph/', moreDetail: 'detailPersoGraph'},
-];
 
-const dataCarouselImageUCBL = [
-	{img: improvemygpx, caption: 'Improve My GPX', link: 'https://hemoreg.me/works/improvemygpx/', moreDetail: 'detailImproveMyGpx'},
-	{img: explateau, caption: 'Croque Salade', link: '', moreDetail: 'detailCroqueSalade'},
-	{img: sondouagesite, caption: 'Sondouage', link: 'https://hemoreg.me/works/sondouage/', moreDetail: 'detailSondouage'}
-];
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -97,7 +79,7 @@ const useStyles = makeStyles(theme => ({
             <br/>
             <img src={Hemoreg} width={imgW} alt="HemöreG Logo"/>
             <br/>
-            <FullScreenDialog data={dataCarouselImageHemoreg}/>
+            <FullScreenDialog data={dataCarouselImage.dataCarouselImageHemoreg}/>
           </React.Fragment>
         );
       case 2:
@@ -115,7 +97,7 @@ const useStyles = makeStyles(theme => ({
               <img src={lyon1} width={imgW} alt="Lyon 1 Logo"/>
             </Link>
             <br/>
-            <FullScreenDialog data={dataCarouselImageUCBL}/>
+            <FullScreenDialog data={dataCarouselImage.dataCarouselImageUCBL}/>
           </React.Fragment>
         );
       case 3:
@@ -186,7 +168,7 @@ const useStyles = makeStyles(theme => ({
 		);
       case 1:
         return (
-        dataCarouselImageHemoreg.map((data, index) => {
+          dataCarouselImage.dataCarouselImageHemoreg.map((data, index) => {
           return(
             <Paper className={classes.paper} key={index}>
               <Link
@@ -204,7 +186,7 @@ const useStyles = makeStyles(theme => ({
         }));
       case 2:
           return (
-            dataCarouselImageUCBL.map((data, index) => {
+            dataCarouselImage.dataCarouselImageUCBL.map((data, index) => {
               return(
                 <Paper className={classes.paper} key={index}>
                   <Link

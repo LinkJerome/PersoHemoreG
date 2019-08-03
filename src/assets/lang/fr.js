@@ -67,6 +67,7 @@ export const fr = {
     "professionalSummary": "Grâce à ma formation en Informatique sur 3 ans ; une ouverture en économie, sur les handicaps ; une culture générale ainsi qu'un stage chez Capgemini Vietnam, j'ai pu surtout développer des compétences en Web mais aussi en logiciel et système.",
     "place": "Lieu de naissance :",
     "placeOfBirth": "La ville rose : Toulouse",
+    "portfolio": "Portfolio",
     "reset": "Recommencer",
     "timelineEnd": "Vous avez atteint la fin de ma Timeline !",
     "whoAmI": "Apprenez à me connaître !",
