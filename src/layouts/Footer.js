@@ -8,7 +8,8 @@ const useStyles = makeStyles({
       position: 'fixed',
       bottom: '0px',
       background: '#ffffff',
-      height: '2vw'
+      height: '2vw',
+      textAlign: 'center'
     },
   });
 

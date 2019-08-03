@@ -1,14 +1,99 @@
 import React from 'react';
-import { Grid, Typography, Container, LinearProgress } from '@material-ui/core';
+import { Grid, Typography, Container } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
+import CustomCircular from '../components/CustomCircular';
+import { makeStyles } from '@material-ui/core/styles';
 
+
+const myInfos = [
+    {
+        description: 'Suite Adobe - 80%',
+        details: 'detailSuiteAdobe',
+        variant: 'static',
+        color: 'secondary',
+        value: 80,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'HTML/CSS - 80%',
+        details: 'detailHtmlCss',
+        variant: 'static',
+        color: 'primary',
+        value: 80,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'Javascript - 80%',
+        details: 'detailJavascript',
+        variant: 'static',
+        color: 'primary',
+        value: 80,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'React.JS - 80%',
+        details: 'detailReactJs',
+        variant: 'static',
+        color: 'primary',
+        value: 80,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'PHP - 60%',
+        details: 'detailPhp',
+        variant: 'static',
+        color: 'inherit',
+        value: 60,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'SQL - 60%',
+        details: 'detailSQL',
+        variant: 'static',
+        color: 'inherit',
+        value: 60,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'C/C++ - 60%',
+        details: 'detailC',
+        variant: 'static',
+        color: 'inherit',
+        value: 60,
+        size: 125,
+        thickness: 4
+    },
+    {
+        description: 'Unix - 60%',
+        details: 'detailUnix',
+        variant: 'static',
+        color: 'inherit',
+        value: 60,
+        size: 125,
+        thickness: 4
+    }
+];
+
+const useStyles = makeStyles(theme => ({
+    root: {
+          width: '100%',
+          margin: theme.spacing(1)
+    }
+  }));
 
 function About({ t }) {
+    const classes = useStyles();
   return (
         <Container maxWidth="xl">
             <Typography variant="h3" component="h1"  id="infos">{t('aboutMe')}</Typography>
             <Typography variant="h4" component="h2">{t('whoAmI')}</Typography>
-            <Grid container data-av-animation="fadeIn">
+            <Grid container data-av-animation="fadeIn" spacing={2}>
                 <Grid item sm={12} md={6}>
                     <Typography variant="h5" component="h3">{t('personalInfos2')}</Typography>
                     <Typography variant="h6" component="h4">
@@ -38,26 +123,19 @@ function About({ t }) {
                     <Typography variant="h6" component="h4">
                         {t('professionalSummary')}
                     </Typography>
-                    <Typography component="p">HTML/CSS - 90%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={90} valueBuffer={100}/>
-                    <Typography component="p">Javascript - 85%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={85} valueBuffer={100}/>
-                    <Typography component="p">React.JS - 60%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={60} valueBuffer={100}/>
-                    <Typography component="p">PHP - 70%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={70} valueBuffer={100}/>
-                    <Typography component="p">SQL - 60%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={60} valueBuffer={100}/>
-                    <Typography component="p">C/C++ - 75%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={75} valueBuffer={100}/>
-                    <Typography component="p">Unix - 65%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={65} valueBuffer={100}/>
-                    <Typography component="p">Suite Adobe - 80%</Typography>
-                    <LinearProgress variant="buffer" color="secondary" value={80} valueBuffer={100}/>
+                    <Grid
+                        container
+                        direction="row"
+                        alignItems="center"
+                        alignContent="center"
+                        spacing={2}
+                        className={classes.root}
+                    >
+                        {myInfos.map((data, index) => {
+                            return <CustomCircular key={index} data={data}/>;
+                        })}
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid container>
-                
             </Grid>
         </Container>
   )};

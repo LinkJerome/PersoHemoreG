@@ -23,12 +23,14 @@ import sondouagesite from './../assets/img/website/sondouagesite.jpg';
 import persograph from './../assets/img/website/persograph.jpg';
 import xiot from './../assets/img/website/XIoT.png';
 import zupDeCo from './../assets/img/website/zup-de-co.png';
+import zupDeCo2 from './../assets/img/website/zup-de-co2.png';
 
 
 
 /* SETTING AND CSS OF THE PAGE */
 
 const imgW = "300vw";
+const imgWFull = "50%";
 
 const dataCarouselImageHemoreg = [
 	{img: maquette, caption: 'French Groove', link: 'https://www.frenchgroove.com/', moreDetail: 'detailFrenchGroove'},
@@ -49,8 +51,7 @@ const useStyles = makeStyles(theme => ({
 		  width: '100%'
     },
     button: {
-      marginTop: theme.spacing(1),
-      marginRight: theme.spacing(1)
+      margin: theme.spacing(1, 1),
     },
     actionsContainer: {
       	marginBottom: theme.spacing(2)
@@ -168,7 +169,7 @@ const useStyles = makeStyles(theme => ({
 		return (
 			<Paper className={classes.paper}>
 				<Typography component="h5" variant="h5" gutterBottom>
-					<Trans i18nKey="jobList0"/>
+					<Trans i18nKey="detailCapgemini"/>
 				</Typography>
 				<br/>
 				<Link
@@ -176,7 +177,7 @@ const useStyles = makeStyles(theme => ({
 					rel="noopener noreferrer"
 					href="https://www.capgemini.com/wp-content/uploads/2019/02/X-IoT_Secure-and-Agnostic-Device-Management-Platform_Web-PaP.pdf"
 				>
-					<img src={xiot} width={imgW} alt="Capgemini, Vietnam"/>
+					<img src={xiot} width={imgWFull} alt="Capgemini, Vietnam"/>
 				</Link>
 				<Typography component="h5" variant="subtitle1" gutterBottom>
 					<Trans i18nKey="creationYadak"/>
@@ -219,6 +220,25 @@ const useStyles = makeStyles(theme => ({
                 </Paper>
               );
             }));
+      case 3:
+        return (
+          <Paper className={classes.paper}>
+            <Typography component="h5" variant="h5" gutterBottom>
+              <Trans i18nKey="detailZupDeCo"/>
+            </Typography>
+            <br/>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.zupdeco.org/benevole/"
+            >
+              <img src={zupDeCo2} width={imgWFull} alt="ZupdeCo"/>
+            </Link>
+            <Typography component="h5" variant="subtitle1" gutterBottom>
+              <Trans i18nKey="creationZupdeCo"/>
+            </Typography>
+          </Paper>
+        );
       default:
         return (null);
     }
@@ -265,12 +285,12 @@ function Timeline() {
             justify="center"
             alignItems="center"
           >
-            <Grid item sm={12} md={8} lg={6} xl={4}>
+            <Grid item sm md lg xl>
               <Typography variant="h2" component="h2" gutterBottom>
                 <Trans i18nKey="myCourse"/>
               </Typography>
             </Grid>
-            <Grid item sm={12} md={8} lg={6} xl={4}>
+            <Grid item sm md lg xl>
               <Typography  variant="subtitle1" component="h3" gutterBottom>
                 <Trans i18nKey="myCourseSub"/>
               </Typography>

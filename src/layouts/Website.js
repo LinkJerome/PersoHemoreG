@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import DrawerMinimize from '../components/DrawerMinize';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Header from './Header';
 import routes from '../routes';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -67,7 +67,7 @@ function Website() {
                     changeLanguage={_handleChangeLanguage}
                     toolbarClass={classes.toolbar}
                 />
-                <Container maxWidth="xl" className={classes.app}>
+                <Container maxWidth="xl" /*className={classes.app}*/>
                     <Header />
                     {routes.map((route, index) => (
                     <Route
@@ -77,7 +77,7 @@ function Website() {
                         component={route.main}
                     />
                     ))}
-                    <Footer/>
+                    {/* <Footer/> */}
                 </Container>
             </Router>
         </div>
