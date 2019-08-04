@@ -52,7 +52,6 @@ function CustomCircular({data}) {
                     </CardContent>
                 </CardActionArea>
             </Card>
-			
         </Grid>
     )};
 

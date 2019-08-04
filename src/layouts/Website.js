@@ -72,6 +72,7 @@ function Website() {
                     <Header />
                     {routes.map((route, index) => (
                     <Suspense
+                        key={index}
                         fallback={
                             <CircularProgress
                                 color="primary"
@@ -82,7 +83,6 @@ function Website() {
                         }
                     >
                         <Route
-                            key={index}
                             path={route.path}
                             exact={route.exact}
                             component={route.main}

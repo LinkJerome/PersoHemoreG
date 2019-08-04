@@ -13,49 +13,57 @@ const dataCarouselPortfolio = [
         img: maquette,
         caption: 'French Groove',
         link: 'https://www.frenchgroove.com/',
-        moreDetail: 'detailFrenchGroove'
+        moreDetail: 'detailFrenchGroove',
+        tag: 'creation'
     },
     {
         img: Hemoreg,
         caption: 'HemöreG',
         link: 'https://www.hemoreg.me',
-        moreDetail: 'detailHemoreg'
+        moreDetail: 'detailHemoreg',
+        tag: 'creation',
     },
     {
         img: meteo09,
         caption: 'Meteo 09',
         link: 'https://www.facebook.com/Meteo09/',
-        moreDetail: 'detailMeteo09'
+        moreDetail: 'detailMeteo09',
+        tag: 'identiteNumerique'
     },
     {
         img: chutSite,
         caption: 'Chut Bibliothèque',
         link: 'https://hemoreg.me/works/chutbibliotheque/',
-        moreDetail: 'detailChutBibliotheque'
+        moreDetail: 'detailChutBibliotheque',
+        tag: 'creation',
     },
     {
         img: persograph,
         caption: 'Perso graph',
         link: 'https://hemoreg.me/works/persograph/',
-        moreDetail: 'detailPersoGraph'
+        moreDetail: 'detailPersoGraph',
+        tag: 'adaptation',
     },
     {
         img: improvemygpx,
         caption: 'Improve My GPX',
         link: 'https://hemoreg.me/works/improvemygpx/',
-        moreDetail: 'detailImproveMyGpx'
+        moreDetail: 'detailImproveMyGpx',
+        tag: 'teamWork'
     },
     {
         img: explateau,
         caption: 'Croque Salade',
         link: '',
-        moreDetail: 'detailCroqueSalade'
+        moreDetail: 'detailCroqueSalade',
+        tag: 'teamWork'
     },
     {
         img: sondouagesite,
         caption: 'Sondouage',
         link: 'https://hemoreg.me/works/sondouage/',
-        moreDetail: 'detailSondouage'
+        moreDetail: 'detailSondouage',
+        tag: 'creation'
     }
 ];
   
