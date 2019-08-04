@@ -28,7 +28,7 @@ function CustomCircular({data}) {
     
 
     return(
-        <Grid item sm={6} md={3} className={classes.root}>
+        <Grid item xs={12} sm={6} md={3} className={classes.root}>
             <Card className={classes.card}>
                 <CardActionArea
                     onClick={() => handleClickOpen(data.value)}

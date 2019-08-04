@@ -267,18 +267,18 @@ function Timeline() {
             justify="center"
             alignItems="center"
           >
-            <Grid item sm md lg xl>
+            <Grid item xs sm md lg xl>
               <Typography variant="h2" component="h2" gutterBottom>
                 <Trans i18nKey="myCourse"/>
               </Typography>
             </Grid>
-            <Grid item sm md lg xl>
+            <Grid item xs sm md lg xl>
               <Typography  variant="subtitle1" component="h3" gutterBottom>
                 <Trans i18nKey="myCourseSub"/>
               </Typography>
             </Grid>
           </Grid>
-          <Grid item sm={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Stepper activeStep={activeStep} orientation="vertical">
                 {steps.map((label, index) => (
                 <Step key={label}>
@@ -317,7 +317,7 @@ function Timeline() {
                 </Paper>
             )}
             </Grid>
-            <Grid item sm={12} md={6} lg={8}>
+            <Grid item xs={12} md={6} lg={8}>
               <Grid container>
                 {getStepContent2(activeStep, classes)}
               </Grid>

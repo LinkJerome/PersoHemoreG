@@ -1,9 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin, faTwitter, faFirefox } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDown, faBars, faBriefcase, faEnvelope, faFilePdf, faProjectDiagram, faStar, faVenusMars, faHome, faFlag, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { Container } from '@material-ui/core';
+import { Container, CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import React from 'react';
+import React, { Suspense } from 'react';
 import DrawerMinimize from '../components/DrawerMinize';
 import Header from './Header';
 import routes from '../routes';
@@ -37,6 +37,11 @@ const useStyles = makeStyles(theme => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
+    },
+    showLoading: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
     }
 }));
 
@@ -66,12 +71,23 @@ function Website() {
                 <Container maxWidth="xl">
                     <Header />
                     {routes.map((route, index) => (
-                    <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        component={route.main}
-                    />
+                    <Suspense
+                        fallback={
+                            <CircularProgress
+                                color="primary"
+                                size={100}
+                                thickness={4}
+                                className={classes.showLoading}
+                            />
+                        }
+                    >
+                        <Route
+                            key={index}
+                            path={route.path}
+                            exact={route.exact}
+                            component={route.main}
+                        />
+                    </Suspense> 
                     ))}
                 </Container>
             </Router>

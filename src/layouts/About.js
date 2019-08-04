@@ -20,7 +20,7 @@ function About({ t }) {
             <Typography variant="h3" component="h1"  id="infos">{t('aboutMe')}</Typography>
             <Typography variant="h4" component="h2">{t('whoAmI')}</Typography>
             <Grid container data-av-animation="fadeIn" spacing={2}>
-                <Grid item sm={12} md={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h3">{t('personalInfos2')}</Typography>
                     <Typography variant="h6" component="h4">
                         {t('personalSummary')}
@@ -44,7 +44,7 @@ function About({ t }) {
                         LinkJerome@gmail.com
                     </Typography>
                 </Grid>
-                <Grid item sm={12} md={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h3">{t('mySkills')}</Typography>
                     <Typography variant="h6" component="h4">
                         {t('professionalSummary')}
