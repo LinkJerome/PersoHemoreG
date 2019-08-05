@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     },
     gridList: {
       width: '100%',
-      height: 480,
+      height: 600,
     },
     icon: {
       color: 'rgba(255, 255, 255, 0.54)',
@@ -27,7 +27,10 @@ export default function Portfolio() {
     const [values, setValues] = React.useState({
         number: '5',
         filter: '',
-        page: '0'
+        page: '0',
+        size: 240,
+        spacing: 0,
+        cols: 2
       });
 
     const getData = data => {
@@ -36,7 +39,7 @@ export default function Portfolio() {
             ...oldValues,
             [data.target.name]: data.target.value,
             page: 0
-        }))        
+        }))
         : setValues(oldValues => ({
             ...oldValues,
             [data.target.name]: data.target.value,
@@ -44,18 +47,23 @@ export default function Portfolio() {
     }
 
     const filteredData = values.filter || values.page || values.number ? 
-      dataCarouselPortfolio.filter((tile, index) =>
-        (values.filter ? tile.tag === values.filter : true) &&
-        index >= values.page * values.number + 1 &&
-        index <= (values.page + 1) * values.number
+      dataCarouselPortfolio.filter(tile =>
+        (values.filter ? tile.tag === values.filter : true) 
       ) :
       dataCarouselPortfolio;
 
   return (
     <Container maxWidth="lg" className={classes.root}>
         <PortfolioToolbar onChange={getData} data={dataCarouselPortfolio} values={values}/>
-        <GridList cellHeight={240} className={classes.gridList}>
+        <GridList
+          cols={values.cols}
+          spacing={values.spacing}
+          cellHeight={values.size}
+          className={classes.gridList}
+        >
             {filteredData.map((tile, index) => (
+              index >= values.page * values.number + 1 &&
+              index <= (values.page + 1) * values.number ?
             <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.caption} />
                 <GridListTileBar
@@ -67,7 +75,7 @@ export default function Portfolio() {
                     </IconButton>
                 }
                 />
-            </GridListTile>
+            </GridListTile> : null
             ))}
         </GridList>
     </Container>
