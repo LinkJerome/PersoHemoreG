@@ -31,10 +31,10 @@ export default function Portfolio(props) {
       });
 
     const getData = data => {
-        data.target.name === 'filter' ?
+        data.target.name === 'filter' || data.target.name === 'number' ?
         setValues(oldValues => ({
             ...oldValues,
-            filter: data.target.value,
+            [data.target.name]: data.target.value,
             page: 0
         }))        
         : setValues(oldValues => ({
