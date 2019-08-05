@@ -34,7 +34,7 @@ export default function PortfolioToolbar({onChange, data, values}) {
 
     const renderMenuItems = () => {
         return (data.filter((tile, index, self) => index === self.findIndex((t) => (
-            t.tag === tile.tag))).sort((a, b) => a.tag > b.tag).map((tile, index) => (
+            t.tag === tile.tag))).map((tile, index) => (
             index < values.number ?
                 <MenuItem key={index} value={tile.tag}>{tile.tag}</MenuItem>
             : null

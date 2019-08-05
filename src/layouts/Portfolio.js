@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-export default function Portfolio(props) {
+export default function Portfolio() {
     const classes = useStyles();
     const [values, setValues] = React.useState({
         number: '5',
@@ -43,15 +43,19 @@ export default function Portfolio(props) {
         }));
     }
 
+    const filteredData = values.filter || values.page || values.number ? 
+      dataCarouselPortfolio.filter((tile, index) =>
+        (values.filter ? tile.tag === values.filter : true) &&
+        index >= values.page * values.number + 1 &&
+        index <= (values.page + 1) * values.number
+      ) :
+      dataCarouselPortfolio;
 
   return (
     <Container maxWidth="lg" className={classes.root}>
         <PortfolioToolbar onChange={getData} data={dataCarouselPortfolio} values={values}/>
         <GridList cellHeight={240} className={classes.gridList}>
-            {dataCarouselPortfolio.map((tile, index) => (
-                index >= values.page * values.number + 1 &&
-                index <= (values.page + 1) * values.number &&
-                (values.filter ? values.filter === tile.tag : true) ?
+            {filteredData.map((tile, index) => (
             <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.caption} />
                 <GridListTileBar
@@ -64,7 +68,6 @@ export default function Portfolio(props) {
                 }
                 />
             </GridListTile>
-            : null
             ))}
         </GridList>
     </Container>
