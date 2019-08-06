@@ -51,6 +51,7 @@ export default function Portfolio() {
         (values.filter ? tile.tag === values.filter : true) 
       ) :
       dataCarouselPortfolio;
+      console.log(filteredData);
 
   return (
     <Container maxWidth="lg" className={classes.root}>
@@ -62,8 +63,8 @@ export default function Portfolio() {
           className={classes.gridList}
         >
             {filteredData.map((tile, index) => (
-              index >= values.page * values.number + 1 &&
-              index <= (values.page + 1) * values.number ?
+              index >= values.page * values.number &&
+              index <= (values.page + 1) * values.number - 1 ?
             <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.caption} />
                 <GridListTileBar
