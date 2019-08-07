@@ -27,6 +27,11 @@ const menuContent = [
         text: 'portfolio',
         icon: 'project-diagram',
         url: '/portfolio'
+    },
+    {
+        text: 'personnal',
+        icon: 'eye',
+        url: '/personnal'
     }, 
     {
         text: 'Divider'

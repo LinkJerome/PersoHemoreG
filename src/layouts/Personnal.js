@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, GridListTile, GridListTileBar, IconButton, GridList } from '@material-ui/core';
-import dataCarouselPortfolio from './../assets/constants/dataCarouselPortfolio';
+import dataPortfolio from './../assets/constants/dataPortfolio';
 import { makeStyles } from '@material-ui/core/styles';
 import PortfolioToolbar from '../components/PortfolioToolbar';
-import InfoIcon from '@material-ui/icons/Info';
+import HelpIcon from '@material-ui/icons/Help';
 import { Trans } from 'react-i18next';
 
 const useStyles = makeStyles(theme => ({
@@ -47,15 +47,15 @@ export default function Portfolio() {
     }
 
     const filteredData = values.filter || values.page || values.number ? 
-      dataCarouselPortfolio.filter(tile =>
+      dataPortfolio.filter(tile =>
         (values.filter ? tile.tag === values.filter : true) 
       ) :
-      dataCarouselPortfolio;
+      dataPortfolio;
       console.log(filteredData);
 
   return (
     <Container maxWidth="lg" className={classes.root}>
-        <PortfolioToolbar onChange={getData} data={dataCarouselPortfolio} values={values}/>
+        <PortfolioToolbar onChange={getData} data={dataPortfolio} values={values}/>
         <GridList
           cols={values.cols}
           spacing={values.spacing}
@@ -72,7 +72,7 @@ export default function Portfolio() {
                 subtitle={<Trans i18nKey={tile.moreDetail}/>}
                 actionIcon={tile.link ? 
                     <IconButton onClick={() => window.open(tile.link,'_blank')} aria-label={`info about ${tile.caption}`} className={classes.icon}>
-                    <InfoIcon />
+                    <HelpIcon />
                     </IconButton> : null
                 }
                 />

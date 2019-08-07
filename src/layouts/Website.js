@@ -1,6 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin, faTwitter, faFirefox } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDown, faBars, faBriefcase, faEnvelope, faFilePdf, faProjectDiagram, faStar, faVenusMars, faHome, faFlag, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faBars, faBriefcase, faEnvelope, faFilePdf, faProjectDiagram, faStar, faVenusMars, faHome, faFlag, faDownload, faEye } from '@fortawesome/free-solid-svg-icons';
 import { Container, CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { Suspense } from 'react';
@@ -10,7 +10,7 @@ import routes from '../routes';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-library.add(faTwitter, faLinkedin, faFirefox, faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase, faAngleDown, faHome, faFlag, faDownload);
+library.add(faTwitter, faLinkedin, faFirefox, faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase, faAngleDown, faHome, faFlag, faDownload, faEye);
 
 
 const useStyles = makeStyles(theme => ({
