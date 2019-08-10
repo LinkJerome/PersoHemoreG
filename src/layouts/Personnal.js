@@ -51,10 +51,9 @@ export default function Portfolio() {
         (values.filter ? tile.tag === values.filter : true) 
       ) :
       dataPortfolio;
-      console.log(filteredData);
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
+    <Container maxWidth="xl" className={classes.root}>
         <PortfolioToolbar onChange={getData} data={dataPortfolio} values={values}/>
         <GridList
           cols={values.cols}

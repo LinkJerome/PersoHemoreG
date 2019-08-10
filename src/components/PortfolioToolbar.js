@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Select, FormControl, InputLabel, MenuItem, OutlinedInput, Dialog, DialogTitle, DialogContent, Button, DialogActions, IconButton } from '@material-ui/core';
+import { Select, FormControl, InputLabel, MenuItem, OutlinedInput, Dialog, DialogTitle, DialogContent, Button, DialogActions, IconButton, Grid } from '@material-ui/core';
 import { Trans } from 'react-i18next';
 import TuneIcon from '@material-ui/icons/Tune';
 
@@ -12,22 +12,18 @@ const useStyles = makeStyles(theme => ({
     },
     formControl0: {
       margin: theme.spacing(1),
-      left: 0,
       minWidth: 120,
     },
     formControl1: {
       margin: theme.spacing(1),
-      right: 0,
       minWidth: 120,
     },
     formControl2: {
       margin: theme.spacing(1),
-      left: 200,
       minWidth: 120,
     },
     formControlTune: {
         margin: theme.spacing(1),
-        left: 200,
         minWidth: 30,
       },
     formControlPopup: {
@@ -75,52 +71,66 @@ export default function PortfolioToolbar({onChange, data, values}) {
 
   return (
     <form autoComplete="off">
-        <FormControl variant="outlined" className={classes.formControl0}>
-            <InputLabel ref={inputLabel} htmlFor="outlined-filter-simple">
-                <Trans i18nKey="filter"/>
-            </InputLabel>
-            <Select
-                value={values.filter}
-                onChange={onChange}
-                input={<OutlinedInput labelWidth={labelWidth} name="filter" id="outlined-filter-simple" />}
-            >
-                <MenuItem value={''}>Aucun</MenuItem>
-                {renderMenuItems()}
-            </Select>
-        </FormControl>
-        <FormControl variant="outlined" className={classes.formControl1}>
-            <InputLabel ref={inputLabel} htmlFor="outlined-number-simple">
-                <Trans i18nKey="number"/>
-            </InputLabel>
-            <Select
-                value={values.number}
-                onChange={onChange}
-                input={<OutlinedInput labelWidth={labelWidth} name="number" id="outlined-number-simple" />}
-            >
-                <MenuItem value={5}>5</MenuItem>
-                <MenuItem value={10}>10</MenuItem>
-                <MenuItem value={15}>15</MenuItem>
-                <MenuItem value={20}>20</MenuItem>
-            </Select>
-        </FormControl>
-        <FormControl variant="outlined" className={classes.formControl2}>
-            <InputLabel ref={inputLabel} htmlFor="outlined-page-simple">
-                <Trans i18nKey="page"/>
-            </InputLabel>
-            <Select
-                value={values.page}
-                onChange={onChange}
-                input={<OutlinedInput labelWidth={labelWidth} name="page" id="outlined-page-simple" />}
-            >
-                {renderMenuItems2()}
-            </Select>
-        </FormControl>
-        
-        <FormControl variant="outlined" className={classes.formControlTune}>
-            <IconButton edge="start" color="inherit" onClick={handleTogglePopup} aria-label="close">
-                <TuneIcon />
-            </IconButton>
-        </FormControl>
+        <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="flex-start"
+        >
+            <Grid item xs>
+                <FormControl variant="outlined" className={classes.formControl0}>
+                    <InputLabel ref={inputLabel} htmlFor="outlined-filter-simple">
+                        <Trans i18nKey="filter"/>
+                    </InputLabel>
+                    <Select
+                        value={values.filter}
+                        onChange={onChange}
+                        input={<OutlinedInput labelWidth={labelWidth} name="filter" id="outlined-filter-simple" />}
+                    >
+                        <MenuItem value={''}>Aucun</MenuItem>
+                        {renderMenuItems()}
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item xs>
+                <FormControl variant="outlined" className={classes.formControl1}>
+                    <InputLabel ref={inputLabel} htmlFor="outlined-number-simple">
+                        <Trans i18nKey="number"/>
+                    </InputLabel>
+                    <Select
+                        value={values.number}
+                        onChange={onChange}
+                        input={<OutlinedInput labelWidth={labelWidth} name="number" id="outlined-number-simple" />}
+                    >
+                        <MenuItem value={5}>5</MenuItem>
+                        <MenuItem value={10}>10</MenuItem>
+                        <MenuItem value={15}>15</MenuItem>
+                        <MenuItem value={20}>20</MenuItem>
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item xs>
+                <FormControl variant="outlined" className={classes.formControl2}>
+                    <InputLabel ref={inputLabel} htmlFor="outlined-page-simple">
+                        <Trans i18nKey="page"/>
+                    </InputLabel>
+                    <Select
+                        value={values.page}
+                        onChange={onChange}
+                        input={<OutlinedInput labelWidth={labelWidth} name="page" id="outlined-page-simple" />}
+                    >
+                        {renderMenuItems2()}
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item xs>
+                <FormControl variant="outlined" className={classes.formControlTune}>
+                    <IconButton edge="start" color="inherit" onClick={handleTogglePopup} aria-label="close">
+                        <TuneIcon />
+                    </IconButton>
+                </FormControl>
+            </Grid>
+        </Grid>
         <Dialog disableBackdropClick disableEscapeKeyDown open={state.open} onClose={handleTogglePopup}>
             <DialogTitle>
                 <Trans i18nKey="configurationPortfolio"/>

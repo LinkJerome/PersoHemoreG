@@ -51,7 +51,6 @@ export default function Portfolio() {
         (values.filter ? tile.tag === values.filter : true) 
       ) :
       dataCarouselPortfolio;
-      console.log(filteredData);
 
   return (
     <Container maxWidth="lg" className={classes.root}>
