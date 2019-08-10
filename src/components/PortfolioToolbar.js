@@ -62,11 +62,11 @@ export default function PortfolioToolbar({onChange, data, values}) {
 
     const renderMenuItems2 = () => {
         const maxi = values.filter ?
-            [...Array(Math.round(
+            [...Array(Math.ceil(
                 data.filter(tile =>
                     tile.tag === values.filter
-                ).length / values.number)+1).keys()] :
-            [...Array(Math.round(data.length / values.number)).keys()];
+                ).length / values.number)).keys()] :
+            [...Array(Math.ceil(data.length / values.number)).keys()];
 
         return (maxi.map(val => (
             <MenuItem key={val} value={val}>{val + 1}</MenuItem>
