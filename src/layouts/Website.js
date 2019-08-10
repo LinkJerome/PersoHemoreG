@@ -17,6 +17,9 @@ const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex'
     },
+    component: {
+        marginBottom: theme.spacing(3),
+    },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
@@ -68,7 +71,7 @@ function Website() {
                     changeLanguage={_handleChangeLanguage}
                     toolbarClass={classes.toolbar}
                 />
-                <Container maxWidth="xl">
+                <Container maxWidth="xl" className={classes.component}>
                     <Header />
                     {routes.map((route, index) => (
                     <Suspense

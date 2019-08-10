@@ -64,7 +64,7 @@ const dataPortfolio = [
         caption: 'Nothing',
         link: 'http://www.blankwebsite.com/',
         moreDetail: 'detailDrawingNumeric',
-        tag: 'Draw'
+        tag: 'Mix'
     },
     {
         img: blueMe,
