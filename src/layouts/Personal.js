@@ -4,7 +4,7 @@ import HelpIcon from '@material-ui/icons/Help';
 import React from 'react';
 import { Trans } from 'react-i18next';
 import PortfolioToolbar from '../components/PortfolioToolbar';
-import dataPortfolio from './../assets/constants/dataPortfolio';
+import dataPortfolio from '../assets/constants/dataPortfolio';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-export default function Personnal() {
+export default function Personal() {
     const classes = useStyles();
     const [values, setValues] = React.useState({
         number: '5',

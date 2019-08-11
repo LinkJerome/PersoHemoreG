@@ -26,7 +26,7 @@ const menuContent = [
     {
         text: 'personnal',
         icon: 'eye',
-        url: '/personnal'
+        url: '/personal'
     }, 
     {
         text: 'Divider'

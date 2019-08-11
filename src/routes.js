@@ -3,7 +3,7 @@ import About from './layouts/About';
 import Timeline from './layouts/Timeline';
 import Portfolio from './layouts/Portfolio';
 import Dashboard from './layouts/Dashboard';
-import Personnal from './layouts/Personnal';
+import Personnal from './layouts/Personal';
 // const About = React.lazy(() => import('./layouts/About'));
 // const Timeline = React.lazy(() => import('./layouts/Timeline'));
 // const Portfolio = React.lazy(() => import('./layouts/Portfolio'));
@@ -30,7 +30,7 @@ const routes = [
     main: () => <Portfolio  />
   },
   {
-    path: '/personnal',
+    path: '/personal',
     main: () => <Personnal  />
   }
 ];
