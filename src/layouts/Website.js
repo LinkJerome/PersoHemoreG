@@ -1,14 +1,14 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLinkedin, faTwitter, faFirefox } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDown, faBars, faBriefcase, faEnvelope, faFilePdf, faProjectDiagram, faStar, faVenusMars, faHome, faFlag, faDownload, faEye } from '@fortawesome/free-solid-svg-icons';
-import { Container, CircularProgress } from '@material-ui/core';
+import { faFirefox, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faAngleDown, faBars, faBriefcase, faDownload, faEnvelope, faEye, faFilePdf, faFlag, faHome, faProjectDiagram, faStar, faVenusMars } from '@fortawesome/free-solid-svg-icons';
+import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import React, { Suspense } from 'react';
-import DrawerMinimize from '../components/DrawerMinize';
-import Header from './Header';
-import routes from '../routes';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import DrawerMinimize from '../components/DrawerMinize';
+import routes from '../routes';
+import Header from './Header';
 
 library.add(faTwitter, faLinkedin, faFirefox, faFilePdf, faEnvelope, faBars, faVenusMars, faStar, faProjectDiagram, faBriefcase, faAngleDown, faHome, faFlag, faDownload, faEye);
 
@@ -74,23 +74,23 @@ function Website() {
                 <Container maxWidth="xl" className={classes.component}>
                     <Header />
                     {routes.map((route, index) => (
-                    <Suspense
-                        key={index}
-                        fallback={
-                            <CircularProgress
-                                color="primary"
-                                size={100}
-                                thickness={4}
-                                className={classes.showLoading}
-                            />
-                        }
-                    >
+                    // <Suspense
+                    //     fallback={
+                    //         <CircularProgress
+                    //             color="primary"
+                    //             size={100}
+                    //             thickness={4}
+                    //             className={classes.showLoading}
+                    //         />
+                    //     }
+                    // >
                         <Route
+                            key={index}
                             path={route.path}
                             exact={route.exact}
                             component={route.main}
                         />
-                    </Suspense> 
+                    // </Suspense> 
                     ))}
                 </Container>
             </Router>

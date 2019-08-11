@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     },
     gridList: {
       width: '100%',
-      height: 600,
+      height: '100%',
     },
     icon: {
       color: 'rgba(255, 255, 255, 0.54)',
@@ -67,13 +67,13 @@ export default function Portfolio() {
             <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.caption} />
                 <GridListTileBar
-                title={tile.caption}
-                subtitle={<Trans i18nKey={tile.moreDetail}/>}
-                actionIcon={tile.link ? 
-                    <IconButton onClick={() => window.open(tile.link,'_blank')} aria-label={`info about ${tile.caption}`} className={classes.icon}>
-                    <InfoIcon />
-                    </IconButton> : null
-                }
+                  title={tile.caption}
+                  subtitle={<Trans i18nKey={tile.moreDetail}/>}
+                  actionIcon={tile.link ? 
+                      <IconButton onClick={() => window.open(tile.link,'_blank')} aria-label={`info about ${tile.caption}`} className={classes.icon}>
+                      <InfoIcon />
+                      </IconButton> : null
+                  }
                 />
             </GridListTile> : null
             ))}

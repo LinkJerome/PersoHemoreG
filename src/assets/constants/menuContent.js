@@ -14,11 +14,6 @@ const menuContent = [
         url: '/about'
     }, 
     {
-        text: 'partners',
-        icon: 'star',
-        url: '/partners'
-    }, 
-    {
         text: 'works',
         icon: 'briefcase',
         url: '/timeline'

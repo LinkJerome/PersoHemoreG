@@ -1,10 +1,10 @@
-import React from 'react';
-import { Container, GridListTile, GridListTileBar, IconButton, GridList } from '@material-ui/core';
-import dataPortfolio from './../assets/constants/dataPortfolio';
+import { Container, GridList, GridListTile, GridListTileBar, IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import PortfolioToolbar from '../components/PortfolioToolbar';
 import HelpIcon from '@material-ui/icons/Help';
+import React from 'react';
 import { Trans } from 'react-i18next';
+import PortfolioToolbar from '../components/PortfolioToolbar';
+import dataPortfolio from './../assets/constants/dataPortfolio';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -15,14 +15,14 @@ const useStyles = makeStyles(theme => ({
     },
     gridList: {
       width: '100%',
-      height: 600,
+      height: '100%',
     },
     icon: {
       color: 'rgba(255, 255, 255, 0.54)',
     }
   }));
 
-export default function Portfolio() {
+export default function Personnal() {
     const classes = useStyles();
     const [values, setValues] = React.useState({
         number: '5',
@@ -64,7 +64,7 @@ export default function Portfolio() {
             {filteredData.map((tile, index) => (
               index >= values.page * values.number &&
               index <= (values.page + 1) * values.number - 1 ?
-            <GridListTile key={tile.img}>
+              <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.caption} />
                 <GridListTileBar
                 title={tile.caption}
