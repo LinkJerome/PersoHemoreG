@@ -57,7 +57,7 @@ const dataCarouselImage = {
         {
             img: sondouagesite,
             caption: 'Sondouage',
-            link: 'https://hemoreg.me/works/sondouage/',
+            link: 'https://hemoreg.me/works/testihm/',
             moreDetail: 'detailSondouage'
         }
     ]
