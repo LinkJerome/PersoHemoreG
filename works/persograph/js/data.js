@@ -8,15 +8,15 @@
 var json = {
   "id": 0, 
   "data": {
-    "description": "Bienvenue sur ma toile, vous trouverez sur celle-ci toutes les <em>informations</em> me concernant. N'h\u00e9sitez pas \u00e0 fouiller ! Bonne navigation !\n"
+    "description": "Ce projet n'est plus maintenu, vous pouvez trouver des informations sur <a href=\"http://hemoreg.me\">mon site personnel</a>.\n"
   }, 
-  "name": "J\u00e9r\u00f4me GIL", 
+  "name": "Jérôme GIL", 
   "ipv6_only": false, 
   "children": [
     {
       "id": 1, 
       "data": {
-        "description": "Toutes les informations qui faut conna\u00eetre sur moi. Utile de savoir qui je suis avant de me contacter, non ?\n"
+        "description": "Toutes les informations qui faut connaître sur moi.\n"
       }, 
       "name": "A Propos", 
       "ipv6_only": false, 
@@ -24,17 +24,17 @@ var json = {
         {
           "data": {
             "url": null, 
-            "description": "Je suis n\u00e9 le <em>28 Mai 1997</em> \u00e0 <em>Toulouse</em>. J'ai donc en ce moment <em>21 ans</em>. Nationnalit\u00e9 <em>Fran\u00e7aise</em>.\n", 
+            "description": "Je suis né le <em>28 Mai 1997</em> à <em>Toulouse</em>. J'ai donc en ce moment <em>21 ans</em>. Nationnalité <em>Fran\u00e7aise</em>.\n", 
             "icon": "apropos.png"
           }, 
-          "name": "Identit\u00e9", 
+          "name": "Identité", 
           "ipv6_only": false, 
           "id": 2
         }, 
         {
           "data": {
             "url": null, 
-            "description": "Originaire de Toulouse, je peux me d\u00e9placer dans cette ville facilement. Domicili\u00e9 \u00e0 Lyon. Mail : LinkJerome@gmail.com Tel : +33.(0)6.36.69.98.55\n", 
+            "description": "Originaire de Toulouse, je peux me déplacer dans cette ville facilement. Domicilié à Lyon. Mail : LinkJerome@gmail.com Tel : +33.(0)6.36.69.98.55\n", 
             "icon": "mail.png"
           }, 
           "name": "Adresses", 
@@ -54,7 +54,7 @@ var json = {
         {
           "data": {
             "url": "https://drive.google.com/file/d/1_4JOBAcAKbD9dOq7NC0SUBnUvbpIQ-dj/view?usp=sharing", 
-            "description": "Vous trouverez ci-joint le PDF de mon CV afin de pouvoir l'afficher et \u00e9ventuellement l'imprimer !\n", 
+            "description": "Vous trouverez ci-joint le PDF de mon CV afin de pouvoir l'afficher et éventuellement l'imprimer !\n", 
             "icon": "resume.png"
           }, 
           "name": "CV PDF", 
@@ -66,7 +66,7 @@ var json = {
     {
       "id": 6, 
       "data": {
-        "description": "Quelles sont les formations que j'ai effectu\u00e9es ? Tout est expliqu\u00e9 dans cette cat\u00e9gorie !\n"
+        "description": "Quelles sont les formations que j'ai effectuées ? Tout est expliqué dans cette catégorie !\n"
       }, 
       "name": "Formations", 
       "ipv6_only": false, 
@@ -74,7 +74,7 @@ var json = {
         {
           "data": {
             "url": null, 
-            "description": "<em>Sept 2016 - Juin 2019</em>Une solide formation en Informatique et math\u00e9matiques sur 3 ans ; une ouverture en \u00e9conomie, une culture g\u00e9n\u00e9rale (langue, handicaps, sport ...) ainsi qu'un stage en entreprise.\n", 
+            "description": "<em>Sept 2016 - Juin 2019</em>Une solide formation en Informatique et mathématiques sur 3 ans ; une ouverture en économie, une culture générale (langue, handicaps, sport ...) ainsi qu'un stage en entreprise.\n", 
             "icon": null
           }, 
           "name": "Licence en informatique", 
@@ -84,10 +84,10 @@ var json = {
         {
           "data": {
             "url": "https://www.sncf.com/fr/emploi/nos-metiers/commercial-a-bord-des-trains", 
-            "description": "<em>Mai 2016 - Juin 2016</em>Connaissances approfondies du code de circulation des trains. Formation pr\u00e9vention accident, incendies et s\u00e9curit\u00e9 ferroviaire afin de pouvoir assurer la s\u00e9curit\u00e9 des voyageurs.\n", 
+            "description": "<em>Mai 2016 - Juin 2016</em>Connaissances approfondies du code de circulation des trains. Formation prévention accident, incendies et sécurité ferroviaire afin de pouvoir assurer la sécurité des voyageurs.\n", 
             "icon": "voyage.png"
           }, 
-          "name": "Habilitation S\u00e9curit\u00e9", 
+          "name": "Habilitation Sécurité", 
           "ipv6_only": false, 
           "id": 8
         }
@@ -96,7 +96,7 @@ var json = {
     {
       "id": 9, 
       "data": {
-        "description": "J'ai eu l'occasion de pouvoir travailler dans diff\u00e9rentes structures afin de me former et de d\u00e9velopper mes comp\u00e9tences professionnelles. Pour les conna\u00eetre, continuez dans cette cat\u00e9gorie.\n"
+        "description": "J'ai eu l'occasion de pouvoir travailler dans différentes structures afin de me former et de développer mes compétences professionnelles. Pour les connaître, continuez dans cette catégorie.\n"
       }, 
       "name": "Experiences", 
       "ipv6_only": false, 
@@ -104,7 +104,7 @@ var json = {
         {
           "data": {
             "url": "https://www.sncf.com/fr/emploi/nos-metiers/commercial-a-bord-des-trains", 
-            "description": "<em>Mai 2016 - Actuel</em> ASCT Auxiliaire dans les gares de Toulouse Matabiau et Lyon Perrache, les principales missions sont :\n  <ul>\n    <li>G\u00e9rer une \u00e9quipe.</li>\n    <li>Vente et V\u00e9rification de titre de transport.</li>\n    <li>Assurer la s\u00e9curit\u00e9 des trains et des voyageurs.</li>\n  </ul>\n", 
+            "description": "<em>Mai 2016 - Actuel</em> ASCT Auxiliaire dans les gares de Toulouse Matabiau et Lyon Perrache, les principales missions sont :\n  <ul>\n    <li>Gérer une équipe.</li>\n    <li>Vente et Vérification de titre de transport.</li>\n    <li>Assurer la sécurité des trains et des voyageurs.</li>\n  </ul>\n", 
             "icon": "voyage.png"
           }, 
           "name": "Agent Service Commercial Train", 
@@ -114,7 +114,7 @@ var json = {
         {
           "data": {
             "url": null, 
-            "description": "<em>Mai 2014 - Mai 2016</em> Responsable buvette dans une association \u00e0 but non-lucratif de jeu de carte \"Magic The Gathering\". J'ai pu faire essentiellement :\n <ul>\n   <li>Vente et gestion des stocks.</li>\n   <li>Pr\u00e9paration des Sandwichs et service.</li>\n   <li>Management.</li>\n </ul>\n", 
+            "description": "<em>Mai 2014 - Mai 2016</em> Responsable buvette dans une association à but non-lucratif de jeu de carte \"Magic The Gathering\". J'ai pu faire essentiellement :\n <ul>\n   <li>Vente et gestion des stocks.</li>\n   <li>Préparation des Sandwichs et service.</li>\n   <li>Management.</li>\n </ul>\n", 
             "icon": "bar.png"
           }, 
           "name": "Responsable Buvette", 
@@ -124,16 +124,16 @@ var json = {
         {
           "data": {
             "url": "http://www.education.gouv.fr/vie-lyceenne/cid73077/le-conseil-des-delegues-pour-la-vie-lyceenne.html", 
-            "description": "<em>Septembre 2013 - Juin 2015</em> D\u00e9l\u00e9gu\u00e9 et sous-repr\u00e9sentant des \u00e9l\u00e8ves du lyc\u00e9e. J'ai eu l'occasion :\n  <ul>\n    <li>d'\u00eatre porte-parole des \u00e9l\u00e8ves,</li>\n    <li>d'assister \u00e0 des r\u00e9unions p\u00e9dagogiques et administratives,</li>\n    <li>de mettre en place et r\u00e9aliser des projets p\u00e9dagogiques,</li>\n    <li>d'organiser des \u00e9v\u00eanements culturels.</li>\n  </ul>\n"
+            "description": "<em>Septembre 2013 - Juin 2015</em> Délégué et sous-représentant des élèves du lycée. J'ai eu l'occasion :\n  <ul>\n    <li>d'\u00eatre porte-parole des élèves,</li>\n    <li>d'assister à des réunions pédagogiques et administratives,</li>\n    <li>de mettre en place et réaliser des projets pédagogiques,</li>\n    <li>d'organiser des év\u00eanements culturels.</li>\n  </ul>\n"
           }, 
-          "name": "D\u00e9l\u00e9gu\u00e9 du CVL", 
+          "name": "Délégué du CVL", 
           "ipv6_only": false, 
           "id": 12
         }, 
         {
           "data": {
             "url": "http://www.zupdeco.org/agir/devenir-tuteur-benevole", 
-            "description": "<em>Sept 2016 - juin 2017</em> Enseignant tuteur pour des \u00e9l\u00e8ves en difficult\u00e9s dans un coll\u00e8ge \u00e0 Lyon. <ul>\n    <li>Cours particuliers et collectifs,</li>\n    <li>Cours m\u00e9thodiques pour l\u2019apprentissage,</li>\n    <li>Aide aux devoirs particuliers et collectifs.</li>\n</ul>\n", 
+            "description": "<em>Sept 2016 - juin 2017</em> Enseignant tuteur pour des élèves en difficultés dans un collège à Lyon. <ul>\n    <li>Cours particuliers et collectifs,</li>\n    <li>Cours méthodiques pour l\u2019apprentissage,</li>\n    <li>Aide aux devoirs particuliers et collectifs.</li>\n</ul>\n", 
             "icon": "teacher.png"
           }, 
           "name": "Enseignant Tuteur", 
@@ -145,15 +145,15 @@ var json = {
     {
       "id": 14, 
       "data": {
-        "description": "Dans cette cat\u00e9gories, vous trouverez le listing de toutes les Comp\u00e9tences que j'ai acquises dans mes diff\u00e9rentes missions ainsi que leur niveau de ma\u00eetrise. (Comme \u00e7a, vous \u00eates au courant !)\n"
+        "description": "Dans cette catégories, vous trouverez le listing de toutes les Compétences que j'ai acquises dans mes différentes missions ainsi que leur niveau de maîtrise. (Comme \u00e7a, vous \u00eates au courant !)\n"
       }, 
-      "name": "Comp\u00e9tences", 
+      "name": "Compétences", 
       "ipv6_only": false, 
       "children": [
         {
           "data": {
             "url": "https://www.w3schools.com/html/html_css.asp", 
-            "description": "J'ai commenc\u00e9 \u00e0 apprendre ce couple de langage en autodidacte. Ensuite, j'ai eu l'occasion de r\u00e9aliser des projets avec l'universit\u00e9s. Pour y acc\u00e9der, je vous invite \u00e0 aller dans la cat\u00e9gories \"Projets\". <em>Niveau de ma\u00eetrise : 9/10.</em>\n", 
+            "description": "J'ai commencé à apprendre ce couple de langage en autodidacte. Ensuite, j'ai eu l'occasion de réaliser des projets avec l'universités. Pour y accéder, je vous invite à aller dans la catégories \"Projets\". <em>Niveau de maîtrise : 9/10.</em>\n", 
             "icon": "html-css.png"
           }, 
           "name": "HTML / CSS", 
@@ -163,7 +163,7 @@ var json = {
         {
           "data": {
             "url": "https://www.w3schools.com/Js/", 
-            "description": "J'ai abord\u00e9 le Javascript (JS) la toute premi\u00e8re fois lors de ma premi\u00e8re ann\u00e9e en informatique \u00e0 Lyon. J'ai aujourd'hui de tr\u00e8s bonnes connaissances dans ce langage. <em>Niveau de ma\u00eetrise : 8.5/10.</em>\n", 
+            "description": "J'ai abordé le Javascript (JS) la toute première fois lors de ma première année en informatique à Lyon. J'ai aujourd'hui de très bonnes connaissances dans ce langage. <em>Niveau de maîtrise : 8.5/10.</em>\n", 
             "icon": "javascript.png"
           }, 
           "name": "Javascript", 
@@ -173,7 +173,7 @@ var json = {
         {
           "data": {
             "url": "https://www.w3schools.com/php/", 
-            "description": "J'ai pu r\u00e9aliser plusieurs petits projets en PHP, mais j'ai surtout pu coder un site internet fonctionnant avec une base de donn\u00e9es dans le cadre d'une UE de ma licence. <em>Niveau de ma\u00eetrise : 7/10.</em>\n", 
+            "description": "J'ai pu réaliser plusieurs petits projets en PHP, mais j'ai surtout pu coder un site internet fonctionnant avec une base de données dans le cadre d'une UE de ma licence. <em>Niveau de maîtrise : 7/10.</em>\n", 
             "icon": "php.png"
           }, 
           "name": "PHP", 
@@ -183,7 +183,7 @@ var json = {
         {
           "data": {
             "url": "https://www.w3schools.com/sql/", 
-            "description": "Comme expliqu\u00e9 dans l'\u00e9l\u00e9ment \"PHP\", j'ai pu manipuler une base de donn\u00e9es lors du d\u00e9veloppement d'un jeu h\u00e9berg\u00e9. <em>Niveau de ma\u00eetrise : 6.5/10.</em>\n", 
+            "description": "Comme expliqué dans l'élément \"PHP\", j'ai pu manipuler une base de données lors du développement d'un jeu hébergé. <em>Niveau de maîtrise : 6.5/10.</em>\n", 
             "icon": "sql.png"
           }, 
           "name": "SQL", 
@@ -193,7 +193,7 @@ var json = {
         {
           "data": {
             "url": "https://www.w3schools.in/cplusplus-tutorial/", 
-            "description": "Ces langages complets et adapt\u00e9s pour l'apprentissage nous ont \u00e9t\u00e9s impos\u00e9s d\u00e8s la 1\u00e8re ann\u00e9e en informatique. Ceci m'a permis d'avoir un niveau adapt\u00e9 dans ces langages. <em>Niveau de ma\u00eetrise : 7.5/10.</em>\n", 
+            "description": "Ces langages complets et adaptés pour l'apprentissage nous ont étés imposés dès la 1ère année en informatique. Ceci m'a permis d'avoir un niveau adapté dans ces langages. <em>Niveau de maîtrise : 7.5/10.</em>\n", 
             "icon": "c.png"
           }, 
           "name": "C/C++", 
@@ -203,7 +203,7 @@ var json = {
         {
           "data": {
             "url": "https://www.tutorialspoint.com/unix/", 
-            "description": "Connaissance d'un syst\u00e8me d'explo\u00eetation (OS) UNIX ainsi que toutes les commandes permettant le d\u00e9veloppement et la navigation dans un univers aussi large que celui-ci. <em>Niveau de ma\u00eetrise : 6.75/10.</em>\n", 
+            "description": "Connaissance d'un système d'exploîtation (OS) UNIX ainsi que toutes les commandes permettant le développement et la navigation dans un univers aussi large que celui-ci. <em>Niveau de maîtrise : 6.75/10.</em>\n", 
             "icon": "tux.png"
           }, 
           "name": "Unix (Shell)", 
@@ -223,7 +223,7 @@ var json = {
         {
           "data": {
             "url": "http://persohemoreg.alwaysdata.net/works/improvemygpx/index.html", 
-            "description": "Ce projet consiste en la r\u00e9alisation d\u2019un site web permettant aux utilisateurs de visualiser et d\u2019\u00e9diter leurs traces GPS. Notre site est destin\u00e9 aux randonneurs ou tout autres sportifs utilisant un GPS pour enregistrer l'\u00e9dition de leur parcours.\n", 
+            "description": "Ce projet consiste en la réalisation d\u2019un site web permettant aux utilisateurs de visualiser et d\u2019éditer leurs traces GPS. Notre site est destiné aux randonneurs ou tout autres sportifs utilisant un GPS pour enregistrer l'édition de leur parcours.\n", 
             "icon": "world.png"
           }, 
           "name": "Improve my GPX", 
@@ -233,17 +233,17 @@ var json = {
         {
           "data": {
             "url": "http://persohemoreg.alwaysdata.net/works/chutbibliotheque/index.html", 
-            "description": "Site humoristique et projet personnel pour faire taire les personnes qui font trop de bruits dans les biblioth\u00e8ques.\n", 
+            "description": "Site humoristique et projet personnel pour faire taire les personnes qui font trop de bruits dans les bibliothèques.\n", 
             "icon": "shh.png"
           }, 
-          "name": "Chut Biblioth\u00e8que", 
+          "name": "Chut Bibliothèque", 
           "ipv6_only": false, 
           "id": 23
         }, 
         {
           "data": {
             "url": null, 
-            "description": "Projet universitaire de L2, dans lequel nous avons recr\u00e9\u00e9 le jeu \"Croque Carotte\" avec un syst\u00e8me de base de donn\u00e9es.\n", 
+            "description": "Projet universitaire de L2, dans lequel nous avons recréé le jeu \"Croque Carotte\" avec un système de base de données.\n", 
             "icon": "salad.png"
           }, 
           "name": "Croque Salade", 
@@ -263,7 +263,7 @@ var json = {
         {
           "data": {
             "url": "http://persohemoreg.alwaysdata.net/", 
-            "description": "Page personnelle permettant d'apprendre \u00e0 g\u00e9rer des structures compl\u00e8tes, faire de la communication professionnelle et efficace.\n", 
+            "description": "Page personnelle permettant d'apprendre à gérer des structures complètes, faire de la communication professionnelle et efficace.\n", 
             "icon": null
           }, 
           "name": "Page Personnelle", 
@@ -275,7 +275,7 @@ var json = {
     {
       "id": 27, 
       "data": {
-        "description": "Depuis que mon enfance, j'ai eu l'occasion d'apprenre des langages diff\u00e9rents. Dans cette cat\u00e9gorie, je vous parlerai de mon niveau dans ces diverses langues.\n"
+        "description": "Depuis que mon enfance, j'ai eu l'occasion d'apprenre des langages différents. Dans cette catégorie, je vous parlerai de mon niveau dans ces diverses langues.\n"
       }, 
       "name": "Langues", 
       "ipv6_only": false, 
@@ -283,7 +283,7 @@ var json = {
         {
           "data": {
             "url": null, 
-            "description": "L'anglais est une langue qui m'a toujours int\u00e9ress\u00e9, j'ai commenc\u00e9 \u00e0 suivre des cours d'anglais d\u00e8s le CE1. J'ai eu l'opportunit\u00e9 d'avoir des correspondants dans le monde entier afin de d\u00e9velopper ma pratique dans cette langue. <em>Niveau de ma\u00eetrise : 9/10</em>\n", 
+            "description": "L'anglais est une langue qui m'a toujours intéressé, j'ai commencé à suivre des cours d'anglais dès le CE1. J'ai eu l'opportunité d'avoir des correspondants dans le monde entier afin de développer ma pratique dans cette langue. <em>Niveau de maîtrise : 9/10</em>\n", 
             "icon": "usa.png"
           }, 
           "name": "Anglais", 
@@ -293,7 +293,7 @@ var json = {
         {
           "data": {
             "url": "https://fr.wikipedia.org/wiki/Occitan", 
-            "description": "Consid\u00e9r\u00e9e \u00e0 tort comme langue r\u00e9gionale, l'occitan est une langue que j'ai tout d'abord pratiqu\u00e9 avec mes grands parents. J'ai ensuite choisi de suivre des cours au lyc\u00e9e afin de pouvoir passer l'\u00e9preuve optionnelle du bac dans cette langue. <em>Niveau de ma\u00eetrise : 7/10.</em>\n", 
+            "description": "Considérée à tort comme langue régionale, l'occitan est une langue que j'ai tout d'abord pratiqué avec mes grands parents. J'ai ensuite choisi de suivre des cours au lycée afin de pouvoir passer l'épreuve optionnelle du bac dans cette langue. <em>Niveau de maîtrise : 7/10.</em>\n", 
             "icon": "occitania.png"
           }, 
           "name": "Occitan", 
@@ -303,7 +303,7 @@ var json = {
         {
           "data": {
             "url": null, 
-            "description": "J'ai d\u00e9but\u00e9 l'apprentissage de l'espagnol en 6\u00e8me gr\u00e2ce au dispositif bilingue afin de pouvoir avoir un niveau assez \u00e9lev\u00e9 \u00e0 la fin de lyc\u00e9e. En effet, en tant normal, nous devions commencer cette langue en 4eme. <em>Niveau de ma\u00eetrise : 5/10.</em>\n", 
+            "description": "J'ai débuté l'apprentissage de l'espagnol en 6ème grâce au dispositif bilingue afin de pouvoir avoir un niveau assez élevé à la fin de lycée. En effet, en tant normal, nous devions commencer cette langue en 4eme. <em>Niveau de maîtrise : 5/10.</em>\n", 
             "icon": "spain.png"
           }, 
           "name": "Espagnol", 
