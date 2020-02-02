@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0288dc9f-1f0b-467a-8f71-f847f50a1609/deploy-status)](https://app.netlify.com/sites/hemoreg/deploys)
