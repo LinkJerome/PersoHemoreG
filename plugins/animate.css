@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+/* CUSTOM PART */
+#carousel-exp img[onclick] {
+  cursor: pointer;
+}
+
+#carousel-exp source[onclick] {
+  cursor: pointer;
+}
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0
