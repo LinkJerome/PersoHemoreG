@@ -19,7 +19,7 @@
 
 <script>
 	window.onload = function () {
-		var userLang = navigator.language || navigator.userLanguage;
+		var userLang = navigator.language;
 		if (userLang === "fr" || userLang === "FR" || userLang === "fr-FR" || userLang === "fr-fr"){
 			window.setTimeout(function(){ window.location.replace("fr/"); },1500);
 		} else {
