@@ -9,6 +9,12 @@
   cursor: pointer;
 }
 
+.centered-vertically {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0
@@ -3636,7 +3642,7 @@
 div#slider { overflow: hidden }
 
 div#slider figure {
-  position: relative; 
+  position: relative;
   width: 500%;
   margin: 0;
   padding: 0;
@@ -3666,7 +3672,7 @@ img.logo {
 	margin-right:auto;
 }
 
-/* background */		
+/* background */
 .hero {
 	background: black url(../img/bullets.png) center / cover;
 }
